@@ -4,45 +4,60 @@ import React from "react";
 const CourseCategory = () => {
   const categories = [
     {
-      icon: "/images/icon/icon_127.svg",
-      title: "IT",
-      courses: "120+ Courses",
-    },
-    {
-      icon: "/images/icon/icon_128.svg",
-      title: "Graphic Design",
-      courses: "318+ Courses",
-    },
-    {
-      icon: "/images/icon/icon_129.svg",
-      title: "Art",
-      courses: "73+ Courses",
-    },
-    {
-      icon: "/images/icon/icon_130.svg",
-      title: "Business",
-      courses: "430+ Courses",
-    },
-    {
-      icon: "/images/icon/icon_131.svg",
-      title: "Digital Marketing",
-      courses: "230+ Courses",
-    },
-    {
-      icon: "/images/icon/icon_132.svg",
-      title: "Language",
-      courses: "310+ Courses",
-    },
-    {
-      icon: "/images/icon/icon_133.svg",
-      title: "Development",
-      courses: "73+ Courses",
-    },
+      skill: "Visual arts",
+      examples: "digital, painting, sculpture, photography, etc",
+      img: "/images/gallery/competitionsImages/visualArts2.png",
+      alt: ""
+    }
   ];
+
+  const category = {
+    skill: "Visual arts",
+    examples: "digital, painting, sculpture, photography, etc",
+    img: "/images/gallery/competitionsImages/visualArts2.png",
+    alt: ""
+  };
+  // const categories = [
+  //   {
+  //     icon: "/images/icon/icon_127.svg",
+  //     title: "IT",
+  //     courses: "120+ Courses",
+  //   },
+  //   {
+  //     icon: "/images/icon/icon_128.svg",
+  //     title: "Graphic Design",
+  //     courses: "318+ Courses",
+  //   },
+  //   {
+  //     icon: "/images/icon/icon_129.svg",
+  //     title: "Art",
+  //     courses: "73+ Courses",
+  //   },
+  //   {
+  //     icon: "/images/icon/icon_130.svg",
+  //     title: "Business",
+  //     courses: "430+ Courses",
+  //   },
+  //   {
+  //     icon: "/images/icon/icon_131.svg",
+  //     title: "Digital Marketing",
+  //     courses: "230+ Courses",
+  //   },
+  //   {
+  //     icon: "/images/icon/icon_132.svg",
+  //     title: "Language",
+  //     courses: "310+ Courses",
+  //   },
+  //   {
+  //     icon: "/images/icon/icon_133.svg",
+  //     title: "Development",
+  //     courses: "73+ Courses",
+  //   },
+  // ];
 
   return (
     <>
-      {categories.map((category, index) => (
+      {/* {categories.map((category, index) => (
         <div key={index} className="col-lg-3 col-md-4 col-sm-6 d-flex">
           <a
             href="#"
@@ -52,17 +67,43 @@ const CourseCategory = () => {
               <Image
                 width={42}
                 height={42}
-                src={category.icon}
+                src={category.img}
                 alt=""
                 className="lazy-img"
               />
             </div>
-            <h4 className="tx-dark mt-45 lg-mt-30">{category.title}</h4>
-            <p>{category.courses}</p>
+            <h4 className="tx-dark mt-45 lg-mt-30">{category.skill}</h4>
+            <p>{category.examples}</p>
           </a>
-          {/* /.card-style-eighteen */}
+          /.card-style-eighteen
         </div>
-      ))}
+      ))} */}
+
+      <div className="col-lg-3 col-md-4 col-sm-6 d-flex ">
+        <a
+          href="#"
+          className="card-style-eighteen text-center tran3s mb-40 xs-mb-20 position-relative"
+        >
+          <div className=" d-flex align-items-end justify-content-center">
+            <div
+              className="bg-black position-absolute opacity-50"
+              style={{ height: "100%", width: "100%" }}
+            >
+              {" "}
+            </div>
+            <Image
+              width={300}
+              height={150}
+              src={category.img}
+              alt=""
+              className="lazy-img "
+            />
+          </div>
+          {/* <h4 className="tx-dark mt-45 lg-mt-30">{category.skill}</h4>
+          <p>{category.examples}</p> */}
+        </a>
+        {/* /.card-style-eighteen */}
+      </div>
       <div className="col-lg-3 col-md-4 col-sm-6 d-flex">
         <a
           href="#"

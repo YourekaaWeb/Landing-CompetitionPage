@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import Countdown from "./Countdown";
 
 const Hero = () => {
   return (
@@ -7,28 +10,35 @@ const Hero = () => {
         <div className="row align-items-center">
           <div className="col-md-6">
             <div className="text-wrapper" data-aos="fade-right">
-              <h1 className="hero-heading fw-500 tx-dark">
-                Start learning from our top experts.
-              </h1>
-              <p className="text-lg tx-dark mb-30 pt-35 lg-pt-20 lg-mb-20">
-                Unlock your potential with unlimited short courses &amp; earn
-                certificates to boost your CV.
+              {/* //fw-500 tx-dark */}
+              <h1 className="hero-heading">Yourekaa Battle of the Arts.</h1>
+              {/* <p className="text-lg tx-dark mb-10 pt-35 lg-pt-20 lg-mb-20">
+                Show the world what you can do!
+              </p> */}
+              <p className="tx-dark mb-30 pt-35 lg-pt-20 lg-mb-20">
+                In a world where perfection is often prized, we're excited to
+                announce a creative competition that celebrates the beauty in
+                the broken, the imperfect, and the unconventional We want you to
+                explore beauty in the fractured, the fragmented, and the
+                unconventional
               </p>
               <div className="d-lg-flex align-items-center">
-                <a
-                  href="#"
+                <div
+                  // href="#"
                   className="btn-twentyFour fw-500 position-relative d-inline-flex align-items-center me-5 mt-30"
                 >
-                  <span>Explore all Courses</span>
+                  <span>
+                    Show the world <br /> what you can do!
+                  </span>
                   <img
                     src="/images/icon/icon_123.svg"
                     alt="icon"
                     className="ms-3"
                   />
-                </a>
+                </div>
                 <div className="btn-eighteen position-relative d-inline-block tx-dark mt-15 md-mt-20">
                   <a href="#" className="fw-500 tran3s">
-                    Join for Free Now!
+                    Register for Free Now!
                   </a>
                 </div>
               </div>
@@ -46,38 +56,49 @@ const Hero = () => {
                 alt="img"
                 className="lazy-img"
               />
-              <div className="media-img">
+              <div className="media-img ">
+                <div className="bg-black   h-50">
+                  <h3 className="text-white text-start p-4 fw-300 fs-2 ">
+                    Theme: <br /> Fractured Beauty
+                  </h3>
+                  {/* <h3 className="text-white text-middle fw-400 fs-1 p-3">
+                    {" "}
+                    Fractured Beauty
+                  </h3> */}
+                </div>
                 <Image
                   width={490}
-                  height={542}
+                  height={942}
                   layout="responsive"
-                  src="/images/media/img_58.jpg"
+                  src="/images/media/abstract1.jpg"
                   alt="img"
-                  className="lazy-img"
+                  className="lazy-img w-100 h-50 position-relative"
                 />
+
+                <div className="position-absolute bg-black p-3  bottom-10 mt-[3rem] start-50 translate-middle ">
+                  {" "}
+                  <Countdown targetDate="2024-11-31T00:00:00" />
+                </div>
               </div>
 
-              <div
+              {/* <div
                 className="card-style card-one d-flex flex-column justify-content-center align-items-center"
                 data-aos="fade-right"
                 data-aos-delay="100"
               >
                 <h4>120k+</h4>
                 <p>Online Videos</p>
-              </div>
-              {/* /.card-one */}
-
-              <div
+              </div> */}
+              {/* <div
                 className="card-style card-two d-flex flex-column justify-content-center align-items-center"
                 data-aos="fade-left"
                 data-aos-delay="100"
               >
                 <h4>200+</h4>
                 <p>Categories</p>
-              </div>
-              {/* /.card-one */}
+              </div> */}
 
-              <div
+              {/* <div
                 className="card-style card-three d-flex flex-column justify-content-center align-items-center"
                 data-aos="fade-left"
                 data-aos-delay="300"
@@ -92,8 +113,7 @@ const Hero = () => {
                     <i className="bi bi-arrow-right-short" />
                   </span>
                 </div>
-              </div>
-              {/* /.card-one */}
+              </div> */}
 
               <img
                 src="/images/shape/shape_146.svg"

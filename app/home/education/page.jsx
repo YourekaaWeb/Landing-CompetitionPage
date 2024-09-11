@@ -16,7 +16,7 @@ import HowToStartBlock from "@/components/home-page/home-3/HowToStartBlock";
 import SignUpBanner from "@/components/home-page/home-3/SignUpBanner";
 import Testimonial from "@/components/home-page/home-3/Testimonial";
 export const metadata = {
-  title: "Education || Jano - Creative Multipurpose React NextJS Template",
+  title: "Yourekaa | Competition"
 };
 const education = () => {
   return (
@@ -36,7 +36,7 @@ const education = () => {
         Feature Section Thirty Nine
         =====================================================
         --> */}
-      <div className="fancy-feature-thirtyNine position-relative zn2 pt-90 pb-50 lg-pt-50 lg-pb-10">
+      {/* <div className="fancy-feature-thirtyNine position-relative zn2 pt-90 pb-50 lg-pt-50 lg-pb-10">
         <div className="container">
           <div className="row gx-xxl-5">
             <FeatureBlock />
@@ -62,7 +62,7 @@ const education = () => {
           alt="shape"
           className="shapes shape-four lazy-img"
         />
-      </div>
+      </div> */}
       {/*
         =====================================================
         Feature Section Forty

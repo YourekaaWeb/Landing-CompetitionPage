@@ -6,7 +6,7 @@ import {
   pagesItems,
   portfolioItems,
   blogItems,
-  contactItems,
+  contactItems
 } from "@/data/menu";
 
 import Image from "next/image";
@@ -70,7 +70,7 @@ const MainMenu = () => {
             >
               Home
             </a>
-            <ul className="dropdown-menu">
+            {/* <ul className="dropdown-menu">
               <li>
                 <div className="row">
                   {menuItems.map((menu, index) => (
@@ -104,7 +104,7 @@ const MainMenu = () => {
                   ))}
                 </div>
               </li>
-            </ul>
+            </ul> */}
           </li>
           {/* End li (home mega menu) */}
 
@@ -128,7 +128,7 @@ const MainMenu = () => {
             >
               Pages
             </a>
-            <ul className="dropdown-menu">
+            {/* <ul className="dropdown-menu">
               {pagesItems.map((item, index) => (
                 <li className="dropdown-submenu dropdown" key={index}>
                   <a
@@ -161,7 +161,7 @@ const MainMenu = () => {
                   </ul>
                 </li>
               ))}
-            </ul>
+            </ul> */}
           </li>
           {/* End li (pages) */}
 
