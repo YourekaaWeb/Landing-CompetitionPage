@@ -10,11 +10,11 @@ const prizeList = [
   },
   {
     icon: "./images/gallery/competitionsImages/prize-img1.png",
-    title: "Opportunities to collaborate with builders and inventors."
+    title: "Be a part of our community, work on more exciting projects."
   },
   {
     icon: "./images/gallery/competitionsImages/prize-img1.png",
-    title: "Be a part of our community, work on more exciting projects."
+    title: "Opportunities to collaborate with builders and inventors."
   }
 ];
 
