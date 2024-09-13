@@ -12,7 +12,7 @@ const Counter = () => {
       unit: "billion",
       label: "People Helped",
       image: "/images/shape/shape_72.svg",
-      delay: "100",
+      delay: "100"
     },
     {
       id: 2,
@@ -20,7 +20,7 @@ const Counter = () => {
       unit: "",
       label: "Country Impected",
       image: "/images/shape/shape_73.svg",
-      delay: "200",
+      delay: "200"
     },
     {
       id: 3,
@@ -28,7 +28,7 @@ const Counter = () => {
       unit: "k+",
       label: "Volunteer",
       image: "/images/shape/shape_74.svg",
-      delay: "300",
+      delay: "300"
     },
     {
       id: 4,
@@ -36,13 +36,13 @@ const Counter = () => {
       unit: "",
       label: "Sucessfull Project",
       image: "/images/shape/shape_75.svg",
-      delay: "400",
-    },
+      delay: "400"
+    }
   ];
 
   const { ref, inView } = useInView({
     /* Optional options */
-    threshold: 0,
+    threshold: 0
   });
 
   const renderedCounters = countersData.map((counter) => (

@@ -15,6 +15,7 @@ import Hero from "@/components/home-page/home-3/Hero";
 import HowToStartBlock from "@/components/home-page/home-3/HowToStartBlock";
 import SignUpBanner from "@/components/home-page/home-3/SignUpBanner";
 import Testimonial from "@/components/home-page/home-3/Testimonial";
+import Prizes from "@/components/home-page/home-3/Prizes";
 export const metadata = {
   title: "Yourekaa | Competition"
 };
@@ -74,21 +75,37 @@ const education = () => {
             className="title-style-one text-center mb-85 lg-mb-30"
             data-aos="fade-up"
           >
-            <div className="sc-title text-uppercase">OUR CORUSES</div>
-            <h2 className="main-title fw-500 tx-dark m0">
-              Explore 4000+ Free Online Courses
+            <div
+              style={{ fontSize: "12px" }}
+              className="sc-title text-uppercase"
+            >
+              Experiment, innovate, and surprise us!
+            </div>
+            <h2
+              style={{ fontSize: "24px" }}
+              className="main-title fw-500 tx-dark m0"
+            >
+              To interpret this theme, we are calling for submissions from ANY
+              creative medium, including but not limited to:
             </h2>
           </div>
         </div>
         {/* End .container */}
 
-        <div className="bg-wrapper m-auto">
-          <div className="container">
+        <div className="bg-wrapper m-auto ">
+          <div className="container d-flex align-items-center justify-items-center">
             <div className="row">
               <CourseCategory />
             </div>
           </div>
         </div>
+        {/* <p
+          style={{ fontSize: "24px", textAlign: "center" }}
+          className="main-title fw-500 tx-dark m0"
+        >
+          In short, if you can create it, we want to see it! Don't be limited -
+          experiment, innovate, and surprise us!
+        </p> */}
         {/* End bg-wrapper */}
       </div>
 
@@ -97,6 +114,72 @@ const education = () => {
     Feature Section Forty One
     =====================================================
     */}
+      {/* <section>
+        <Prizes />
+      </section> */}
+
+      <div
+        style={{ marginTop: "8rem" }}
+        className="fancy-feature-thirtyNine position-relative zn2 pt-90 pb-50 lg-pt-50 lg-pb-10"
+      >
+        <div className="container">
+          <div className="row gx-xxl-5">
+            <div
+              style={{
+                position: "absolute",
+                top: -120,
+                marginInline: "28%"
+              }}
+              className="rating-box"
+            >
+              <img
+                style={{
+                  width: "250px",
+                  animation: "rotated 70s infinite linear"
+                }}
+                src="/images/shape/shape_154.svg"
+                alt="media"
+              />
+              <div
+                style={{
+                  textAlign: "center",
+                  position: "absolute",
+                  bottom: "100px",
+                  left: "100px",
+                  fontWeight: "bolder"
+                }}
+                className="rate fw-500 tx-dark"
+              >
+                400k <br />
+                <span>
+                  cash prizes <br /> to be won
+                </span>
+              </div>
+            </div>
+            <Prizes />
+          </div>
+        </div>
+        <img
+          src="/images/shape/shape_148.svg"
+          alt="shape"
+          className="shapes shape-one lazy-img"
+        />
+        <img
+          src="/images/shape/shape_149.svg"
+          alt="shape"
+          className="shapes shape-two lazy-img"
+        />
+        <img
+          src="/images/shape/shape_150.svg"
+          alt="shape"
+          className="shapes shape-three lazy-img"
+        />
+        <img
+          src="/images/shape/shape_151.svg"
+          alt="shape"
+          className="shapes shape-four lazy-img"
+        />
+      </div>
       <div className="fancy-feature-fortyOne position-relative mt-160 lg-mt-100">
         <div className="container">
           <div className="row">
