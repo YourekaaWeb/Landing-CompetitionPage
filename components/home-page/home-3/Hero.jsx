@@ -73,6 +73,8 @@ const Hero = () => {
                   src="/images/gallery/competitionsImages/BOA1.gif"
                   alt="img"
                   className="lazy-img w-100 h-50 position-relative"
+                  unoptimized={true}
+                  loading="eager"
                 />
 
                 <div className="position-absolute bg-black p-3  bottom-10 mt-[3rem] start-50 translate-middle ">
