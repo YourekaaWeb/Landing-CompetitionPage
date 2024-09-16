@@ -11,7 +11,7 @@ const Hero = () => {
           <div className="col-md-6">
             <div className="text-wrapper" data-aos="fade-right">
               {/* //fw-500 tx-dark */}
-              <h1 className="hero-heading">Yourekaa Battle of the Arts.</h1>
+              <h1 className="hero-heading">Battle of the Arts.</h1>
               {/* <p className="text-lg tx-dark mb-10 pt-35 lg-pt-20 lg-mb-20">
                 Show the world what you can do!
               </p> */}
@@ -70,7 +70,7 @@ const Hero = () => {
                   width={490}
                   height={942}
                   layout="responsive"
-                  src="/images/media/abstract1.jpg"
+                  src="/images/gallery/competitionsImages/BOA1.gif"
                   alt="img"
                   className="lazy-img w-100 h-50 position-relative"
                 />
@@ -114,12 +114,37 @@ const Hero = () => {
                   </span>
                 </div>
               </div> */}
-
+              {/* 
               <img
-                src="/images/shape/shape_146.svg"
+                // src="/images/shape/shape_146.svg"
+                src="/images/gallery/competitionsImages/monsterIcon.png"
                 alt="shape"
-                className="shapes shape-one lazy-img"
+                className="elements"
+                style={{
+                  top: -200,
+                  width: "100px",
+                  height: "100px",
+                  right: -220
+                }}
+              /> */}
+              {/* <img
+                // src="/images/shape/shape_146.svg"
+                src="/images/gallery/competitionsImages/monsterIcon.png"
+                alt="shape"
+                className="elements"
+                style={{
+                  top: 590,
+                  width: "100px",
+                  height: "100px",
+                  right: -10
+                }}
+              /> */}
+              <img
+                src="/images/shape/shape_147.svg"
+                alt="shape"
+                className="shapes shape-two lazy-img"
               />
+              {/* </div> */}
               <img
                 src="/images/shape/shape_147.svg"
                 alt="shape"

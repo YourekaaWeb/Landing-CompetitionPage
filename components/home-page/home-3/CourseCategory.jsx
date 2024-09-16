@@ -6,61 +6,47 @@ const CourseCategory = () => {
     {
       skill: "Visual arts",
       examples: "digital, painting, sculpture, photography, etc",
-      img: "/images/gallery/competitionsImages/visualArts2.png",
-      alt: ""
+      img: "/images/gallery/competitionsImages/visualArts2.png"
     },
     {
       skill: "Performing arts",
       examples: "music, dance, theater, spoken word, film etc",
-      img: "/images/gallery/competitionsImages/music1.png",
-      alt: ""
+      img: "/images/gallery/competitionsImages/music1.png"
     },
     {
       skill: "Literary arts",
       examples: "poetry, short stories, essays, etc",
-      img: "/images/gallery/competitionsImages/literaryArts1.jpg",
-      alt: ""
+      img: "/images/gallery/competitionsImages/literaryArts1.jpg"
     },
     {
       skill: "Gaming",
       examples:
         "Adventure games, Fighting games, Multiplayer online battle arena games, Alternate reality games, etc",
-      img: "/images/gallery/competitionsImages/visualArts2.png",
-      alt: ""
+      img: "/images/gallery/competitionsImages/gaming-img.jpg"
     },
     {
       skill: "Craftsmanship",
       examples: "wood, metal, clay, glass, etc.",
-      img: "/images/gallery/competitionsImages/craft1.jpeg",
-      alt: ""
+      img: "/images/gallery/competitionsImages/craft1.jpeg"
     },
     {
-      skill: "Fashion Designer",
+      skill: "Fashion ",
       examples:
         "Streetwear Designers, Accessory Designers, Textile Designers, etc",
-      img: "/images/gallery/competitionsImages/fashion-img.jpg",
-      alt: ""
+      img: "/images/gallery/competitionsImages/fashion-img.jpg"
     },
     {
       skill: "Digital media",
       examples: "video, animation, graphic design, etc.",
-      img: "/images/gallery/competitionsImages/digital2.png",
-      alt: ""
+      img: "/images/gallery/competitionsImages/digital2.png"
     },
     {
       skill: "Unconventional materials",
       examples: "recycled materials, natural elements, etc",
-      img: "/images/gallery/competitionsImages/unconventionArt-img.jpg",
-      alt: ""
+      img: "/images/gallery/competitionsImages/unconventionArt-img.jpg"
     }
   ];
 
-  const category = {
-    skill: "Visual arts",
-    examples: "digital, painting, sculpture, photography, etc",
-    img: "/images/gallery/competitionsImages/visualArts2.png",
-    alt: ""
-  };
   // const categories = [
   //   {
   //     icon: "/images/icon/icon_127.svg",
@@ -125,6 +111,7 @@ const CourseCategory = () => {
       {categories.map((category, index) => (
         <div
           key={index}
+          style={{ borderRadius: "100%" }}
           className="col-lg-3 col-md-4 col-sm-6 d-flex custom-div"
         >
           <a
@@ -136,7 +123,7 @@ const CourseCategory = () => {
                 width={42}
                 height={42}
                 src={category.img}
-                alt=""
+                alt={`${category.skill} image`}
                 className="lazy-img"
               />
             </div>

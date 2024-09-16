@@ -16,6 +16,8 @@ import HowToStartBlock from "@/components/home-page/home-3/HowToStartBlock";
 import SignUpBanner from "@/components/home-page/home-3/SignUpBanner";
 import Testimonial from "@/components/home-page/home-3/Testimonial";
 import Prizes from "@/components/home-page/home-3/Prizes";
+import Rules from "@/components/home-page/home-3/Rules";
+import CompetitionStages from "@/components/home-page/home-3/CompetitionStages";
 export const metadata = {
   title: "Yourekaa | Competition"
 };
@@ -140,12 +142,20 @@ const education = () => {
                 src="/images/shape/shape_154.svg"
                 alt="media"
               />
+              {/* <img
+                style={{
+                  width: "400px",
+                  animation: "rotated 70s infinite linear"
+                }}
+                src="/images/gallery/competitionsImages/yellowStar2.png"
+                alt="media"
+              /> */}
               <div
                 style={{
                   textAlign: "center",
                   position: "absolute",
                   bottom: "100px",
-                  left: "100px",
+                  left: "105px",
                   fontWeight: "bolder"
                 }}
                 className="rate fw-500 tx-dark"
@@ -180,7 +190,7 @@ const education = () => {
           className="shapes shape-four lazy-img"
         />
       </div>
-      <div className="fancy-feature-fortyOne position-relative mt-160 lg-mt-100">
+      {/* <div className="fancy-feature-fortyOne position-relative mt-160 lg-mt-100">
         <div className="container">
           <div className="row">
             <div className="col-xl-5 col-lg-6" data-aos="fade-right">
@@ -190,15 +200,14 @@ const education = () => {
                   What’s your goal?
                 </h2>
               </div>
-              {/* End title */}
+              End title
               <Faq />
-              {/* /.accordion-style-six */}
+              /.accordion-style-six
               <a href="#" className="btn-one fw-500 mt-50 md-mt-40">
                 Explorer All
               </a>
             </div>
-            {/* End col-xl-5 */}
-
+            End col-xl-5
             <div
               className="col-xxl-6 col-xl-7 col-lg-6 ms-auto"
               data-aos="fade-left"
@@ -218,20 +227,22 @@ const education = () => {
                   className="lazy-img shapes shape-two"
                 />
               </div>
-              {/* /.wrapper */}
+              /.wrapper
             </div>
-            {/* End col-xl-6 */}
+            End col-xl-6
           </div>
         </div>
-      </div>
+      </div> */}
       {/* /.fancy-feature-fortyOne */}
+
+      <Rules />
 
       {/* 
 		=============================================
 		Feature Section Forty Two
 		============================================== 
 		*/}
-      <div className="fancy-feature-fortyTwo position-relative pt-130 pb-180 mt-180 lg-pt-80 lg-pb-80 xs-mt-120">
+      {/* <div className="fancy-feature-fortyTwo position-relative pt-130 pb-180 mt-180 lg-pt-80 lg-pb-80 xs-mt-120">
         <div className="rating-box">
           <img src="/images/shape/shape_154.svg" alt="media" />
           <div className="rate fw-500 tx-dark">
@@ -239,7 +250,7 @@ const education = () => {
             <span>Courses</span>
           </div>
         </div>
-        {/* End rating-box */}
+        End rating-box
 
         <div className="container">
           <div className="wrapper position-relative">
@@ -247,12 +258,14 @@ const education = () => {
               <h2 className="main-title fw-500 tx-dark m0">Featured Courses</h2>
             </div>
             <CourseFilter />
-            {/* /.slider-wrapper */}
+            /.slider-wrapper
           </div>
-          {/* /.wrapper */}
+          /.wrapper
         </div>
-        {/* End .container */}
-      </div>
+        End .container
+      </div> */}
+
+      <CompetitionStages />
 
       {/* <!-- 
 		=============================================
