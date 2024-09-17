@@ -10605,7 +10605,7 @@ body .btn-twentySix:hover:after {
 
 .competitionGuidelines-container {
   padding: 50px 20px;
-  background-image: url("../images/gallery/bg-images/lt-img.jpeg");
+  background-image: url("../images/gallery/bg-images/art3.jpeg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -10621,8 +10621,8 @@ body .btn-twentySix:hover:after {
   font-weight: bold;
   text-transform: uppercase;
   // color: "#54bfa5",
-  color: #000;
-  background-color: #fff;
+  color: #d7d7d7;
+  background-color: #333;
   padding: 1.5rem 1rem;
   width: 60%;
   margin: 0 auto;
@@ -10634,8 +10634,9 @@ body .btn-twentySix:hover:after {
 .competitionGuidelines-container .guidelines-container {
   flex: 1;
   min-width: 300px;
-  background-color: #f8f9fa;
-  color: #000;
+  // background-color: #f8f9fa;
+  background-color: #303030;
+  color: #fff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -10775,6 +10776,14 @@ body .btn-twentySix:hover:after {
     top: 0.5rem;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+
+  .maintenance-container h1 {
+    font-size: 2.2rem !important;
+  }
+
+  .maintenance-container p {
+    font-size: 1.2rem !important;
   }
 }
 

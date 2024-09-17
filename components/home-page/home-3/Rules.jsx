@@ -81,7 +81,8 @@ export default function CompetitionGuidelines() {
                 textAlign: "center",
                 fontWeight: "bold",
                 marginBottom: "25px",
-                paddingTop: "10px"
+                paddingTop: "10px",
+                color: "#c6eae1"
               }}
             >
               Submission Guidelines
@@ -114,7 +115,8 @@ export default function CompetitionGuidelines() {
                 fontWeight: "bold",
                 marginBottom: "25px",
                 paddingTop: "10px",
-                textAlign: "center"
+                textAlign: "center",
+                color: "#c6eae1"
               }}
             >
               Judging Criteria
