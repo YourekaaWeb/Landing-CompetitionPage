@@ -10605,26 +10605,26 @@ body .btn-twentySix:hover:after {
 
 .competitionGuidelines-container {
   padding: 50px 20px;
-  background-image: url("../images/gallery/bg-images/art3.jpeg");
+  background-image: url("../images/gallery/bg-images/lt-img.jpeg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.heading-container {
-  text-align: center;
-  margin-bottom: 40px;
-}
+// .heading-container {
+//   text-align: center;
+//   margin-bottom: 40px;
+// }
 
-.competitionGuidelines-container h2 {
+.competitionGuidelines-container h3 {
   font-size: 2rem;
   font-weight: bold;
   text-transform: uppercase;
-  // color: "#54bfa5",
+  // color: "#54bfa5";
   color: #d7d7d7;
-  background-color: #333;
+  background-color: #f0f0f0;
   padding: 1.5rem 1rem;
-  width: 60%;
+  width: 80%;
   margin: 0 auto;
   border-radius: 2rem 1rem 3rem 5rem;
 }
@@ -10634,9 +10634,9 @@ body .btn-twentySix:hover:after {
 .competitionGuidelines-container .guidelines-container {
   flex: 1;
   min-width: 300px;
-  // background-color: #f8f9fa;
-  background-color: #303030;
-  color: #fff;
+  background-color: #f8f9fa;
+  // background-color: #303030;
+  color: #000;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -10778,7 +10778,7 @@ body .btn-twentySix:hover:after {
     text-transform: uppercase;
     // color: "#54bfa5",
     color: #000;
-    background-color: #fff;
+    background-color: #f0f0f0;
     padding: 1rem 1rem;
     width: 90%;
     margin: 0 auto;
@@ -11010,8 +11010,8 @@ body .btn-twentySix:hover:after {
   border-radius: 2rem 0.1rem 2.5rem 2rem;
 }
 .registration-form label {
-  background-color: #101010;
-  color: #ff0;
+  // background-color: #101010;
+  color: #000;
   padding: 2px;
   // font-weight: bold;
 }

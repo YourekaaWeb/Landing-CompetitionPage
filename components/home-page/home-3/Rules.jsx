@@ -6,7 +6,6 @@ const submissionGuidelines = [
   "Participants must be part of the community",
   "Entries must be original work created by the participant with or without collaboration",
   "Entries must interpret the theme 'Fractured Beauty' in a way that is respectful and appropriate",
-  "You can have a team of not more than 3 people",
   "A team shouldn't exceed three members",
   "Submissions must be in visual creative formats. I.e. Images and videos",
   "Participants must make a video to pitch their submission, to explain their work",
@@ -51,17 +50,15 @@ export default function CompetitionGuidelines() {
     <section className="competitionGuidelines-container">
       <div style={{ maxWidth: "1450px", margin: "0 auto" }}>
         {/* Section Header */}
-        <div className="heading-container">
+        {/* <div className="heading-container">
           <h2>SuBMiSSioN Guidelines & Judging Criteria</h2>
-        </div>
+        </div> */}
 
         <div
           style={{
             display: "flex",
             flexWrap: "wrap",
             gap: "20px",
-            backgroundColor: "red",
-
             backgroundColor: "#ffffff55"
           }}
           className="container position-relative"
@@ -82,7 +79,7 @@ export default function CompetitionGuidelines() {
                 fontWeight: "bold",
                 marginBottom: "25px",
                 paddingTop: "10px",
-                color: "#c6eae1"
+                color: "#333"
               }}
             >
               Submission Guidelines
@@ -116,7 +113,7 @@ export default function CompetitionGuidelines() {
                 marginBottom: "25px",
                 paddingTop: "10px",
                 textAlign: "center",
-                color: "#c6eae1"
+                color: "#111"
               }}
             >
               Judging Criteria
