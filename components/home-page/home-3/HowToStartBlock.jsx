@@ -1,39 +1,83 @@
 import Link from "next/link";
 import React from "react";
+import RegistrationForm from "./RegistrationForm";
+import Image from "next/image";
 
 const HowToStartBlock = () => {
   return (
-    <div className="fancy-feature-fortyThree bg-black position-relative pt-130 pb-65 lg-pt-80">
-      <div className="container">
-        <div className="row ">
+    // <div className="fancy-feature-fortyThree position-relative pt-130 pb-65 lg-pt-80 reg-form-section">
+    <div className="reg-form-section px-10">
+      <div className="d-flex justify-content-center">
+        <div className="d-flex reg-flex-container">
           <div
-            className="col-xl-5 col-md-6 ms-auto order-md-last"
-            data-aos="fade-right"
+            // className="w-50"
+            className="reg-form-info col-xl-6 col-md-6 ms-auto w-40 "
+            // data-aos="fade-right"
+            style={{
+              backgroundColor: "#ff0"
+            }}
           >
-            <div className="title-style-one mb-30">
-              <h2 className="main-title fw-500 text-white m0">
-                Don’t know how to start.
-              </h2>
+            <div>
+              <h5>Yourekaa Battle of the Arts.</h5>
+              <p>Show the world what you can do!</p>
+              <div className="reg-form-info-img">
+                <div
+                  className="bg-white w-50 mx-auto px-4 py-3"
+                  style={{
+                    borderRadius: "4rem",
+                    fontSize: "1rem",
+                    boxShadow: " 0 4px 15px rgba(0, 0, 0, 0.25)"
+                  }}
+                >
+                  <p>
+                    You fill up an empty canvas with wonders, the rainbow looks
+                    at your painting in awe, the Statue of liberty would be more
+                    beautiful if you sculpted it, the birds envy your voice,
+                    your pen does magnificent things when it kisses a note, you
+                    are creatively excellent in whatever you do!
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-3 " style={{ paddingLeft: "1rem" }}>
+                <Link
+                  href="mailto:hello@yourekaa.com"
+                  style={{ textDecoration: "underline" }}
+                  className="pb-1"
+                >
+                  hello@yourekaa.com
+                </Link>
+                <div className="d-flex">
+                  <span>
+                    {" "}
+                    <Image
+                      src="/images/icon/x-icon.png"
+                      width={28}
+                      height={28}
+                    ></Image>
+                  </span>
+                  <span>
+                    <Image
+                      src="/images/icon/instagram-icon.png"
+                      width={40}
+                      height={30}
+                    ></Image>
+                  </span>
+
+                  <span></span>
+                </div>
+              </div>
             </div>
-            <p className="fs-20 text-white opacity-75 mb-50 md-mb-30">
-              This short quiz will sort you out. Answer a few simple questions
-              to get personal career advice and course recommendations.
-            </p>
-            <Link
-              href="/pages-menu/about-us-v2"
-              className="btn-twentyFive fw-500 tran3s"
-            >
-              Let’s get started <i className="bi bi-arrow-right ms-2" />
-            </Link>
           </div>
           {/* End .col */}
 
-          <div className="col-md-6 order-md-first" data-aos="fade-left">
-            <img
-              src="/images/media/img_67.png"
-              alt="media"
-              className="lazy-img sm-mt-40"
-            />
+          <div
+            // className="w-50"
+            className="col-md-6  my-auto p-5  align-item-center  w-60 bg-white"
+
+            // data-aos="fade-left"
+          >
+            <RegistrationForm />
           </div>
           {/* End .col */}
         </div>

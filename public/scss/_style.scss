@@ -10939,6 +10939,71 @@ body .btn-twentySix:hover:after {
   animation-delay: 2s;
 }
 
-// .elements {
+.reg-form-section {
+  background-image: url(../images/gallery/bg-images/yellowFlower1.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-block: 5rem;
+  // position: relative;
+}
+// .reg-form-section ::before {
+//   content: "";
 //   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   background-color: rgba(0, 0, 0, 0.1); /* Dark overlay with 50% opacity */
+//   z-index: 1; /* Ensure the overlay stays behind the content */
+//   filter: grayscale(100%); /* Makes the background image grayscale */
+//   pointer-events: none; /* Ensures the overlay doesn't affect interactions */
 // }
+.reg-form-info {
+  display: flex;
+  padding-top: 6rem;
+  // justify-items: center;
+  // align-items: center;
+}
+
+.reg-form-info h5,
+.reg-form-info p {
+  text-align: center;
+}
+
+.reg-form-info h5 {
+  font-weight: bold;
+  font-size: 2rem;
+}
+.reg-form-info p {
+  font-size: 14px;
+}
+
+.reg-form-info-img {
+  background-image: url(../images/gallery/bg-images/feather2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  // padding-inline: 4rem;
+}
+
+.registration-form {
+  background-color: #f0f0f0;
+  border-radius: 2rem 0.1rem 2.5rem 2rem;
+}
+.registration-form label {
+  background-color: #101010;
+  color: #ff0;
+  padding: 2px;
+  // font-weight: bold;
+}
+
+.reg-flex-container {
+  width: 70%;
+  flex-wrap: wrap;
+}
+
+.form-container input,
+.form-container select {
+  padding: 0.5rem 0.3rem;
+}
