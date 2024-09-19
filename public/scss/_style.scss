@@ -10722,6 +10722,24 @@ body .btn-twentySix:hover:after {
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
+  .reg-flex-container {
+    width: 100%; /* Full width on smaller screens */
+    flex-direction: column; /* Stack elements vertically */
+  }
+
+  .reg-form-info,
+  .registration-form {
+    width: 100%; /* Make the containers full width */
+  }
+
+  .reg-form-info h5 {
+    font-size: 1.5rem;
+  }
+
+  .reg-form-info p {
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 576px) {
