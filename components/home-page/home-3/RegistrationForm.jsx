@@ -1,15 +1,16 @@
 import React from "react";
+import TermsModal from "./TermsAndConditionsModal";
 
 const RegistrationForm = () => {
   return (
     <>
       {" "}
-      <form action="#" className="registration-form  text-black p-5">
-        <h3 className="text-black mb-4">Register here</h3>
+      <form action="#" className="registration-form  text-black ">
+        <h3 className="text-black mb-4">Enlist here</h3>
         <div className="messages" />
         <div className="row ">
-          <div className="d-flex gap-4 form-container">
-            <div className="row controls">
+          <div className="  form-container">
+            <div className="row controls splitted-form">
               {" "}
               <div className="col-12">
                 <div className="input-group-meta form-group mb-20">
@@ -65,11 +66,11 @@ const RegistrationForm = () => {
               </div>
             </div>
 
-            <div className="row controls">
+            <div className="row controls splitted-form">
               {" "}
               <div className="col-12">
                 <div className="input-group-meta form-group mb-20">
-                  <label className="d-block">Location (city)*</label>
+                  <label className="d-block">Gender*</label>
                   <select name="location" id="location" className="w-100">
                     <option value="" disabled selected>
                       Select a gender
@@ -124,11 +125,13 @@ const RegistrationForm = () => {
           </div>
 
           <div className="col-12 mt-4">
-            <button className="btn-one fw-500 w-100 text-uppercase fs-14 d-block">
+            <button className="reg-submit-btn btn-one fw-500 w-100 text-uppercase fs-14 d-block">
               Register
             </button>
           </div>
         </div>
+
+        {/* <TermsModal /> */}
       </form>
     </>
   );

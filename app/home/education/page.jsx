@@ -18,6 +18,8 @@ import Testimonial from "@/components/home-page/home-3/Testimonial";
 import Prizes from "@/components/home-page/home-3/Prizes";
 import Rules from "@/components/home-page/home-3/Rules";
 import CompetitionStages from "@/components/home-page/home-3/CompetitionStages";
+import Newsletter from "@/components/home-page/home-3/Newsletter";
+import TermsModal from "@/components/home-page/home-3/TermsAndConditionsModal";
 export const metadata = {
   title: "Yourekaa | Competition"
 };
@@ -75,7 +77,7 @@ const education = () => {
         <div className="container">
           <div
             className="title-style-one text-center mb-85 lg-mb-30"
-            data-aos="fade-up"
+            // data-aos="fade-up"
           >
             <div
               style={{ fontSize: "12px" }}
@@ -110,6 +112,8 @@ const education = () => {
         </p> */}
         {/* End bg-wrapper */}
       </div>
+
+      <TermsModal />
 
       {/*
     =====================================================
@@ -267,19 +271,7 @@ const education = () => {
 
       <CompetitionStages />
 
-      {/* <!-- 
-		=============================================
-		Feature Section Forty Three
-			============================================== 
-		--> */}
-      <HowToStartBlock />
-
-      {/*
-			=====================================================
-				Feedback Section Thirteen
-			=====================================================
-			*/}
-      <div
+      {/* <div
         className="feedback-section-thirteen position-relative mt-130 pb-25 lg-mt-100"
         data-aos="fade-up"
       >
@@ -293,48 +285,65 @@ const education = () => {
               </div>
             </div>
           </div>
-        </div>
-        {/* End .container */}
+        </div> */}
+      {/* End .container */}
 
-        <div className="inner-content">
+      {/* <div className="inner-content">
           <div className="slider-wrapper">
             <div className="feedback_slider_seven">
               <Testimonial />
-            </div>
-            {/* /.feedback_slider_seven */}
-          </div>
-          {/* /.slider-wrapper */}
-        </div>
-        {/* /.inner-content */}
-      </div>
+            </div> */}
+      {/* /.feedback_slider_seven */}
+      {/* </div> */}
+      {/* /.slider-wrapper */}
+      {/* </div> */}
+      {/* /.inner-content */}
+      {/* </div> */}
+      {/* <!-- 
+		=============================================
+		Feature Section Forty Three
+			============================================== 
+		--> */}
+      <HowToStartBlock />
+
+      {/*
+			=====================================================
+				Feedback Section Thirteen
+			=====================================================
+			*/}
 
       {/* <!-- 
 			=============================================
 				Feature Section Forty Four
 			============================================== 
 			--> */}
-      <FeatureBlock2 />
+
+      <div className="newsletter-wrapper">
+        {" "}
+        <Newsletter />
+      </div>
+      {/* <FeatureBlock2 /> */}
 
       {/* <!-- 
 		=============================================
 		Feature Section Forty Five
 		============================================== 
 		--> */}
-      <SignUpBanner />
+      {/* <SignUpBanner /> */}
 
       {/*
 		=====================================================
 		Footer
 		=====================================================
 		*/}
-      <div className="footer-style-eleven theme-basic-footer position-relative">
+      <div className="footer-style-eleven theme-basic-footer position-relative bg-black text-white">
         <div className="bg-wrapper position-relative">
           <div className="container">
             <div className="row justify-content-between">
               <div className="col-xl-2 footer-intro mb-40">
                 <div className="logo">
                   <Link href="/">
-                    <img src="/images/logo/logo_01.png" alt="brand" />
+                    <img src="/images/logo/Yourekaa_green.png" alt="brand" />
                   </Link>
                 </div>
               </div>
@@ -342,14 +351,14 @@ const education = () => {
 
               <Footer2 />
 
-              <div className="col-xl-4 col-lg-5 mb-30 form-widget">
+              {/* <div className="col-xl-4 col-lg-5 mb-30 form-widget">
                 <h5 className="footer-title tx-dark fw-normal">Newslettert</h5>
                 <h6 className="pt-15 pb-20 md-pt-10">Join our newsletter</h6>
                 <NewsLetter />
                 <div className="fs-14 mt-10">
                   We only send interesting and relevant emails.
                 </div>
-              </div>
+              </div> */}
               {/* End .col-xl-4 */}
             </div>
             {/* End .row */}

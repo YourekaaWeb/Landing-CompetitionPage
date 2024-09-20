@@ -3,27 +3,27 @@ import Link from "next/link";
 const links = [
   {
     title: "Privacy & Terms.",
-    href: "/faq",
+    href: "/faq"
   },
   {
     title: "Contact Us",
-    href: "/contact",
-  },
+    href: "/contact"
+  }
 ];
 
 const icons = [
   {
     icon: "fab fa-facebook-f",
-    href: "https://www.facebook.com/",
+    href: "https://www.facebook.com/"
   },
   {
     icon: "fab fa-twitter",
-    href: "https://www.twitter.com/",
+    href: "https://www.twitter.com/"
   },
   {
     icon: "fab fa-linkedin-in",
-    href: "https://www.linkedin.com/",
-  },
+    href: "https://www.linkedin.com/"
+  }
 ];
 
 const LinkItem = ({ title, href }) => {
@@ -46,7 +46,7 @@ const IconItem = ({ icon, href }) => {
 
 const Footer = () => {
   return (
-    <div className="bottom-footer lg-pb-20 position-relative">
+    <div className="bottom-footer lg-pb-20 position-relative bg-black">
       <div className="container">
         <div className="row">
           <div className="col-lg-4 order-lg-0 mt-15">

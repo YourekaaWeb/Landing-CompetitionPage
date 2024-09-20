@@ -6,11 +6,10 @@ import Image from "next/image";
 const HowToStartBlock = () => {
   return (
     // <div className="fancy-feature-fortyThree position-relative pt-130 pb-65 lg-pt-80 reg-form-section">
-    <div className="reg-form-section px-10">
+    <div className="reg-form-section px-10" id="resgistration-form-ref">
       <div className="d-flex justify-content-center">
         <div className="d-flex reg-flex-container">
           <div
-            // className="w-50"
             className="reg-form-info col-xl-6 col-md-6 ms-auto w-40 "
             // data-aos="fade-right"
             style={{
@@ -22,9 +21,9 @@ const HowToStartBlock = () => {
               <p>Show the world what you can do!</p>
               <div className="reg-form-info-img">
                 <div
-                  className="bg-white w-50 mx-auto px-4 py-3"
+                  className=" reg-form-info-whiteBg bg-white  mx-auto px-4 py-5"
                   style={{
-                    borderRadius: "4rem",
+                    borderRadius: "0.4rem",
                     fontSize: "1rem",
                     boxShadow: " 0 4px 15px rgba(0, 0, 0, 0.25)"
                   }}
@@ -39,7 +38,15 @@ const HowToStartBlock = () => {
                 </div>
               </div>
 
-              <div className="mt-3 " style={{ paddingLeft: "1rem" }}>
+              <div
+                className="mt-10 "
+                style={{
+                  paddingLeft: "1rem",
+                  display: "grid",
+                  placeItems: "center",
+                  justifyContent: "center"
+                }}
+              >
                 <Link
                   href="mailto:hello@yourekaa.com"
                   style={{ textDecoration: "underline" }}
@@ -73,7 +80,7 @@ const HowToStartBlock = () => {
 
           <div
             // className="w-50"
-            className="col-md-6  my-auto p-5  align-item-center  w-60 bg-white"
+            className=" bg-white reg-form-outer-wt-wrapper"
 
             // data-aos="fade-left"
           >

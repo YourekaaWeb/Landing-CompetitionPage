@@ -18,9 +18,9 @@ const Hero = () => {
               <p className="tx-dark mb-30 pt-35 lg-pt-20 lg-mb-20">
                 In a world where perfection is often prized, we're excited to
                 announce a creative competition that celebrates the beauty in
-                the broken, the imperfect, and the unconventional We want you to
-                explore beauty in the fractured, the fragmented, and the
-                unconventional
+                the broken, the imperfect, and the unconventional. We want you
+                to explore beauty in the fractured, the fragmented, and the
+                unconventional.
               </p>
               <div className="d-lg-flex align-items-center">
                 <div
@@ -37,8 +37,8 @@ const Hero = () => {
                   />
                 </div>
                 <div className="btn-eighteen position-relative d-inline-block tx-dark mt-15 md-mt-20">
-                  <a href="#" className="fw-500 tran3s">
-                    Register for Free Now!
+                  <a href="#resgistration-form-ref" className="fw-500 tran3s">
+                    Enlist Now!
                   </a>
                 </div>
               </div>
@@ -77,7 +77,7 @@ const Hero = () => {
                   loading="eager"
                 />
 
-                <div className="position-absolute bg-black p-3  bottom-10 mt-[3rem] start-50 translate-middle ">
+                <div className="position-absolute bg-black p-3 bottom-10 mt-[3rem] start-50 translate-middle ">
                   {" "}
                   <Countdown targetDate="2024-11-31T00:00:00" />
                 </div>
