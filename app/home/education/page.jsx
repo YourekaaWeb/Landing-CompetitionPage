@@ -113,7 +113,7 @@ const education = () => {
         {/* End bg-wrapper */}
       </div>
 
-      <TermsModal />
+      {/* <TermsModal /> */}
 
       {/*
     =====================================================
