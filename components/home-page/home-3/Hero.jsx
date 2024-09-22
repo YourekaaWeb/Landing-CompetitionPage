@@ -70,7 +70,8 @@ const Hero = () => {
                   width={490}
                   height={942}
                   layout="responsive"
-                  src="/images/gallery/competitionsImages/BOA1.gif"
+                  // src="/images/gallery/competitionsImages/BOA1.gif"
+                  src="/images/gallery/competitionsImages/yourekaaCraft.svg"
                   alt="img"
                   className="lazy-img w-100 h-50 position-relative"
                   unoptimized={true}

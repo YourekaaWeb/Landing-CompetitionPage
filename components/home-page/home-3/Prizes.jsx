@@ -1,42 +1,44 @@
 "use client";
+import React from "react";
 
-import React, { useRef } from "react";
-import CountUp from "react-countup";
-import { useInView } from "react-intersection-observer";
-const prizeList = [
-  {
-    icon: "./images/gallery/competitionsImages/prize-img1.png",
-    title: "Top 10 submissions will be on Yourekaa explore page."
-  },
-  {
-    icon: "./images/gallery/competitionsImages/prize-img1.png",
-    title: "Be a part of our community, work on more exciting projects."
-  },
-  {
-    icon: "./images/gallery/competitionsImages/prize-img1.png",
-    title: "Opportunities to collaborate with builders and inventors."
-  }
-];
-
-const Prizes = () => {
+const PromoSection = () => {
   return (
-    <>
-      {prizeList.map((feature, index) => (
-        <div key={index} className="col-lg-4 col-md-6 mt-65">
-          <div className="card-style-seventeen d-flex align-items-center mb-40">
-            <div className="icon rounded-circle d-flex align-items-center justify-content-center">
-              <img src={feature.icon} alt="icon" className="lazy-img" />
-            </div>
-            <div className="ps-4 text-wrapper">
-              <h4 className="text-white m0">{feature.title}</h4>
-              <p className="m0">{feature.subtitle}</p>
-            </div>
+    <div className="promoSection">
+      <div className="cardContainer">
+        <div className="card cardYellow">
+          <div className="cardContent">
+            <p className="cardText text-black">400k Cash Prizes to be Won!</p>
           </div>
-          {/* /.card-style-seventeen */}
         </div>
-      ))}
-    </>
+        <div className="card cardBlack">
+          <div className="cardContent">
+            <p className="cardText">
+              Top 10 Submissions on Yourekaa Explore Page!
+            </p>
+          </div>
+        </div>
+        <div className="card cardYellow">
+          <div className="cardContent">
+            <p className="cardText text-black">
+              Be a Part of Our Creative Community & Collaborate!
+            </p>
+          </div>
+        </div>
+        <div className="card cardBlack">
+          <div className="cardContent">
+            <p className="cardText">
+              Work with Inventors and Builders on Exciting Projects!
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="register">
+        <a href="#registration-form-ref" className="registerLink">
+          Enlist by August 20th, 2024 (Register Here)
+        </a>
+      </div>
+    </div>
   );
 };
 
-export default Prizes;
+export default PromoSection;
