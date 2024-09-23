@@ -70,7 +70,6 @@ const RegistrationForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submission triggered")
 
     try {
       const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/competition/submit-entry`, {

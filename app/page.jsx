@@ -6,8 +6,8 @@ export const metadata = {
 };
 const MainRoot = () => {
   // return <Insurance />;
-  return <Education />;
-  // return <UnderMaintenance />;
+  // return <Education />;
+  return <UnderMaintenance />;
 };
 
 export default MainRoot;
