@@ -7734,7 +7734,8 @@ body .btn-twentySix:hover:after {
 }
 /*^^^^^^^^^^^^^^^^^^^^^ Theme Hero Banner Twelve ^^^^^^^^^^^^^^^^^^^^^^^^*/
 .hero-banner-twelve {
-  background: #fbf4ee;
+  // background: #fbf4ee;
+  background-color: #fffff3;
 }
 .hero-banner-twelve .hero-heading {
   font-size: 70px;
@@ -10572,7 +10573,8 @@ body .btn-twentySix:hover:after {
 
 .competitionGuidelines-container {
   padding: 50px 20px;
-  background-image: url("../images/gallery/bg-images/lt-img.jpeg");
+  // background-image: url("../images/gallery/bg-images/lt-img.jpeg");
+  background-color: #ffffcc;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -10597,6 +10599,15 @@ body .btn-twentySix:hover:after {
 }
 .competitionGuidelines-container .container {
   padding: 3rem 5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  font-family: "Poppins", sans-serif;
+}
+
+.competitionGuidelines-container .container:hover {
+  box-shadow: 0 15px 25px rgba(84, 191, 165, 0.6),
+    0 10px 10px rgba(84, 191, 165, 0.4);
+  transform: translateY(-10px);
 }
 .competitionGuidelines-container .guidelines-container {
   flex: 1;
@@ -10674,8 +10685,126 @@ body .btn-twentySix:hover:after {
 //   align-items: center;
 // }
 
+// ART CATEGORY SECTION
+
+.carouselContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // width: 70%;
+  overflow: hidden;
+  position: relative;
+  background-color: #000;
+}
+
+.carousel {
+  display: flex;
+  gap: 1rem;
+  transition: all 0.5s ease;
+  width: 100%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.card {
+  flex: none;
+  width: 300px;
+  min-width: 300px;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.cardImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.cardContent {
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.cardContent h3 {
+  font-size: 1.2rem;
+  color: #ff0; /* Brand color */
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cardContent p {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.carouselContainer::before,
+.carouselContainer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 5%;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.8), transparent);
+  z-index: 1;
+}
+
+.carouselContainer::before {
+  left: 0;
+}
+
+.carouselContainer::after {
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  .carouselContainer {
+    width: 100% !important;
+    margin: auto;
+  }
+  .card {
+    width: 250px;
+    min-width: 250px;
+  }
+
+  .cardImage {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carouselContainer {
+    width: 100% !important;
+    margin: auto;
+  }
+  .card {
+    width: 200px;
+    min-width: 200px;
+  }
+
+  .cardImage {
+    height: 150px;
+  }
+}
+
 .elements {
   position: absolute;
+}
+
+.category-section {
+  // background-color: #ffffaa;
+  background-color: #0f0f0f;
+  // color: #f3f3f3;
 }
 
 .competition-stages-wrapper {
@@ -10735,6 +10864,102 @@ body .btn-twentySix:hover:after {
 .stage-container:nth-child(3) .card {
   animation-delay: 2s;
 }
+
+// PROMO SECTION
+
+.promoSection-wrapper {
+  // background-image: url(../images/gallery/bg-images/whiteArt1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 4rem;
+}
+
+.promoSection {
+  background-color: #000;
+  // background-image: url(../images/gallery/bg-images/whiteArt1.jpg);
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.promoSection .heading {
+  font-size: 1.8rem;
+  color: #ff0;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.promoSection .cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.promoSection .card {
+  width: 140px;
+  height: 140px;
+  background-color: #000;
+  border-radius: 12px;
+  perspective: 1000px;
+  transition: transform 0.3s ease;
+}
+
+.promoSection .card:hover,
+.promoSection .card:focus {
+  transform: rotateY(180deg);
+}
+
+.promoSection .cardYellow {
+  background-color: #ff0;
+  color: #000;
+}
+
+.promoSection .cardBlack {
+  background-color: #000;
+  border: 2px solid #ff0;
+  color: #ff0;
+}
+
+.promoSection .cardContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.promoSection .cardText {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.promoSection .register {
+  margin-top: 20px;
+}
+
+.promoSection .registerLink {
+  color: #ff0;
+  font-size: 1.2rem;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .promoSection .card {
+    width: 120px;
+    height: 120px;
+  }
+
+  .promoSection .heading {
+    font-size: 1.5rem;
+  }
+}
+
+// REGISTRATION FORM
 
 .reg-form-section {
   // background-image: url(../images/gallery/bg-images/ynb2.jpg);
@@ -10811,6 +11036,14 @@ body .btn-twentySix:hover:after {
   padding: 0.5rem 0.3rem;
 }
 
+.error-message {
+  color: red;
+}
+
+.otherInputField {
+  border: 1px solid green;
+}
+
 .reg-form-wrapper {
   margin-block: auto;
   padding: 3rem;
@@ -10880,7 +11113,7 @@ body .btn-twentySix:hover:after {
   }
 
   .stage-container {
-    flex-basis: 100%; /* Adjust width for smaller screens */
+    flex-basis: 100%;
   }
 
   .reg-flex-container {
@@ -10889,8 +11122,8 @@ body .btn-twentySix:hover:after {
   }
 
   .reg-flex-container {
-    width: 100%; /* Full width on smaller screens */
-    flex-direction: row; /* Stack elements vertically */
+    width: 100%;
+    flex-direction: row;
   }
 
   .reg-form-outer-wt-wrapper {
@@ -10899,7 +11132,7 @@ body .btn-twentySix:hover:after {
 
   .reg-form-info,
   .registration-form {
-    width: 100%; /* Make the containers full width */
+    width: 100%;
   }
 
   .reg-form-info h5 {
@@ -10911,7 +11144,7 @@ body .btn-twentySix:hover:after {
   }
 
   .stage-container {
-    flex-basis: 100%; /* For mobile, make each container full-width */
+    flex-basis: 100%;
   }
 
   .form-container {
@@ -10976,8 +11209,8 @@ body .btn-twentySix:hover:after {
   }
 
   .reg-flex-container {
-    width: 100%; /* Full width on smaller screens */
-    flex-direction: row; /* Stack elements vertically */
+    width: 100%;
+    flex-direction: row;
   }
 
   .reg-form-outer-wt-wrapper {
@@ -10986,7 +11219,7 @@ body .btn-twentySix:hover:after {
 
   .reg-form-info,
   .registration-form {
-    width: 100%; /* Make the containers full width */
+    width: 100%;
   }
 
   .reg-form-info h5 {
@@ -10998,7 +11231,7 @@ body .btn-twentySix:hover:after {
   }
 
   .stage-container {
-    flex-basis: 100%; /* For mobile, make each container full-width */
+    flex-basis: 100%;
   }
 
   .form-container {
@@ -11066,13 +11299,13 @@ body .btn-twentySix:hover:after {
   }
 
   .reg-flex-container {
-    width: 100%; /* Full width on smaller screens */
-    flex-direction: row; /* Stack elements vertically */
+    width: 100%;
+    flex-direction: row;
   }
 
   .reg-form-info,
   .registration-form {
-    width: 100%; /* Make the containers full width */
+    width: 100%;
   }
 
   .reg-form-info h5 {
@@ -11084,7 +11317,7 @@ body .btn-twentySix:hover:after {
   }
 
   .stage-container {
-    flex-basis: 100%; /* For mobile, make each container full-width */
+    flex-basis: 100%;
   }
 
   .form-container {
@@ -11247,7 +11480,7 @@ body .btn-twentySix:hover:after {
 }
 
 .modal h2 {
-  color: #000; /* Your primary brand color */
+  color: #000;
   font-size: 1.8rem;
   text-align: center;
 }

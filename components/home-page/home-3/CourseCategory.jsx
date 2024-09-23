@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Slider from "react-slick";
+import { useEffect, useRef, useState } from "react";
 
 // const CourseCategory = () => {
 const categories = [
@@ -23,7 +24,7 @@ const categories = [
   {
     skill: "Gaming",
     examples:
-      "adventure games, Fighting games, Multiplayer online battle arena games, Alternate reality games, etc",
+      "adventure, Combat, Multiplayer battle arena, Alternate reality, etc",
     img: "/images/gallery/competitionsImages/gaming-img.jpg"
   },
   {
@@ -98,37 +99,50 @@ export default function CompetitionStages() {
       }
     ]
   };
+
+  const containerRef = useRef(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % categories.length);
+      const scrollAmount = containerRef.current.scrollWidth / categories.length;
+      containerRef.current.scrollTo({
+        left: currentIndex * scrollAmount,
+        behavior: "smooth"
+      });
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [currentIndex]);
+
   return (
-    // <section className="competition-stages-wrapper">
-
-    <>
-      {/* <Slider {...settings}> */}
-      {categories.map((category, index) => (
-        <div key={index} className="col-lg-3 col-md-4 col-sm-6 d-flex">
-          <a
-            href="#"
-            className="card-style-eighteen text-center tran3s mb-40 xs-mb-20"
-          >
-            <div className="icon d-flex align-items-end justify-content-center">
-              <Image
-                width={42}
-                height={42}
-                src={category.img}
-                alt=""
-                className="lazy-img"
-              />
+    <div className="carouselContainer ">
+      <div className="carousel" ref={containerRef}>
+        {categories.map((category, index) => (
+          <div key={index} className="card">
+            <Image
+              src={category.img}
+              alt={category.skill}
+              width={300}
+              height={200}
+              className="cardImage"
+            />
+            <div className="cardContent">
+              <h3>{category.skill}</h3>
+              <p>{category.examples}</p>
             </div>
-            <h4 className="tx-dark mt-45 lg-mt-30">{category.skill}</h4>
-            <p className="lowercase">{category.examples}</p>
-          </a>
-          {/* //           /.card-style-eighteen */}
-          //{" "}
-        </div>
-      ))}
-      {/* </Slider> */}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 
-      {/* Second Div */}
-      {/* <div className="stage-container">
+  {
+    /* Second Div */
+  }
+  {
+    /* <div className="stage-container">
                       <div className="card">
                         <small className="pb-3">Phase 2</small>
                         <h6>Review of submissions</h6>
@@ -138,10 +152,14 @@ export default function CompetitionStages() {
                           vote and decide who makes it to the final stage).
                         </p>
                       </div>
-                    </div> */}
+                    </div> */
+  }
 
-      {/* Third Div */}
-      {/* <div className="stage-container">
+  {
+    /* Third Div */
+  }
+  {
+    /* <div className="stage-container">
                       <div className="card">
                         <small className="pb-3">Phase 3</small>
                         <h6>Judging of submissions</h6>
@@ -151,10 +169,10 @@ export default function CompetitionStages() {
                           Submissions will be judged
                         </p>
                       </div>
-                    </div> */}
-    </>
-    // </section>
-  );
+                    </div> */
+  }
+
+  // </section>
 }
 
 //   return (

@@ -20,6 +20,7 @@ import Rules from "@/components/home-page/home-3/Rules";
 import CompetitionStages from "@/components/home-page/home-3/CompetitionStages";
 import Newsletter from "@/components/home-page/home-3/Newsletter";
 import TermsModal from "@/components/home-page/home-3/TermsAndConditionsModal";
+import PromoSection from "@/components/home-page/home-3/Prizes";
 export const metadata = {
   title: "Yourekaa | Competition"
 };
@@ -73,21 +74,21 @@ const education = () => {
         Feature Section Forty
         =====================================================
         */}
-      <div className="fancy-feature-forty mt-140 lg-mt-100">
+      <div className="fancy-feature-forty  lg-mt-100 category-section">
         <div className="container">
           <div
-            className="title-style-one text-center mb-85 lg-mb-30"
+            className="title-style-one text-center mb-85 lg-mb-30 pt-50 "
             // data-aos="fade-up"
           >
             <div
               style={{ fontSize: "12px" }}
-              className="sc-title text-uppercase"
+              className="sc-title text-uppercase text-white"
             >
               Experiment, innovate, and surprise us!
             </div>
             <h2
               style={{ fontSize: "24px" }}
-              className="main-title fw-500 tx-dark m0"
+              className="main-title fw-500 tx-dark m0 text-white"
             >
               To interpret this theme, we are calling for submissions from ANY
               creative medium, including but not limited to:
@@ -98,7 +99,7 @@ const education = () => {
 
         <div className="bg-wrapper m-auto ">
           <div className="container d-flex align-items-center justify-items-center">
-            <div className="row">
+            <div className="row w-100">
               <CourseCategory />
             </div>
           </div>
@@ -125,52 +126,12 @@ const education = () => {
       </section> */}
 
       <div
-        style={{ marginTop: "8rem" }}
-        className="fancy-feature-thirtyNine position-relative zn2 pt-90 pb-50 lg-pt-50 lg-pb-10"
+        // style={{ marginTop: "8rem" }}
+        className="promoSection-wrapper mt-100 position-relative zn2 pt-90 pb-50 lg-pt-50 lg-pb-10"
       >
         <div className="container">
           <div className="row gx-xxl-5">
-            <div
-              style={{
-                position: "absolute",
-                top: -120,
-                marginInline: "28%"
-              }}
-              className="rating-box"
-            >
-              <img
-                style={{
-                  width: "250px",
-                  animation: "rotated 70s infinite linear"
-                }}
-                src="/images/shape/shape_154.svg"
-                alt="media"
-              />
-              {/* <img
-                style={{
-                  width: "400px",
-                  animation: "rotated 70s infinite linear"
-                }}
-                src="/images/gallery/competitionsImages/yellowStar2.png"
-                alt="media"
-              /> */}
-              <div
-                style={{
-                  textAlign: "center",
-                  position: "absolute",
-                  bottom: "100px",
-                  left: "105px",
-                  fontWeight: "bolder"
-                }}
-                className="rate fw-500 tx-dark"
-              >
-                400k <br />
-                <span>
-                  cash prizes <br /> to be won
-                </span>
-              </div>
-            </div>
-            <Prizes />
+            <PromoSection />
           </div>
         </div>
         <img
