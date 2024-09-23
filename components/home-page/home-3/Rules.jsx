@@ -86,11 +86,10 @@ export default function CompetitionGuidelines() {
             </h3>
             <ul style={{ listStyleType: "none", padding: "0" }}>
               {submissionGuidelines.map((guideline, index) => (
-                <div className="d-flex gap-2">
+                <div className="d-flex gap-2" key={index}>
                   {" "}
                   <span> ✔️</span>{" "}
                   <li
-                    key={index}
                     style={{
                       marginBottom: "10px",
                       borderBottom: "1px solid #c6eae1",
@@ -120,11 +119,10 @@ export default function CompetitionGuidelines() {
             </h3>
             <ul style={{ listStyleType: "none", padding: "0" }}>
               {judgingCriteria.map((criteria, index) => (
-                <div className="d-flex gap-2">
+                <div className="d-flex gap-2" key={index}>
                   {" "}
                   <span> {criteria.icon}</span>{" "}
                   <li
-                    key={index}
                     style={{
                       marginBottom: "10px",
                       borderBottom: "1px solid #c6eae1",

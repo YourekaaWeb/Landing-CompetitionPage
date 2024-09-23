@@ -188,6 +188,7 @@ body {
   position: relative;
   color: var(--text-color);
   scroll-behavior: smooth;
+  // background-color: #fffff3;
 }
 .h1,
 h1,
@@ -10599,16 +10600,16 @@ body .btn-twentySix:hover:after {
 }
 .competitionGuidelines-container .container {
   padding: 3rem 5rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+  // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
   font-family: "Poppins", sans-serif;
 }
 
-.competitionGuidelines-container .container:hover {
-  box-shadow: 0 15px 25px rgba(84, 191, 165, 0.6),
-    0 10px 10px rgba(84, 191, 165, 0.4);
-  transform: translateY(-10px);
-}
+// .competitionGuidelines-container .container:hover {
+//   box-shadow: 0 15px 25px rgba(84, 191, 165, 0.6),
+//     0 10px 10px rgba(84, 191, 165, 0.4);
+//   transform: translateY(-10px);
+// }
 .competitionGuidelines-container .guidelines-container {
   flex: 1;
   min-width: 300px;
@@ -10661,28 +10662,76 @@ body .btn-twentySix:hover:after {
 
 // COMPETITION STAGES
 
-/* styles.css */
-// .competition-stages-wrapper {
-//   height: 25rem;
-//   // max-height: 100%;
-//   display: flex;
-//   justify-content: center;
-//   flex-wrap: wrap;
-//   width: 100%;
-// }
+.competitionStagesWrapper {
+  display: flex;
+  gap: 3rem;
+  overflow-x: auto;
+  padding: 1rem;
+  width: 70%;
+  margin: auto;
+  // margin-left: 50%;
+}
 
-// .stage-container {
-//   // position: relative;
-//   background-image: url("../images/gallery/bg-images/yellowGif2.gif");
-//   background-size: cover;
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   flex: 1;
-//   height: 100%;
-//   width: 100%;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
+.competitionStagesWrapper .stageContainer {
+  min-width: 250px;
+  // width: 30%;
+  height: 350px;
+  margin: auto;
+  background-color: #ff0;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.competitionStagesWrapper .stageContainer:hover {
+  transform: scale(1.05);
+}
+
+.competitionStagesWrapper .card {
+  padding: 1rem;
+  max-width: 90%;
+  height: 100%;
+}
+
+.competitionStagesWrapper .phase {
+  font-size: 0.85rem;
+  color: #ff0;
+  font-weight: bold;
+}
+
+.competitionStagesWrapper .heading {
+  font-size: 1.2rem;
+  color: #000;
+  margin: 0.5rem 0;
+}
+
+.competitionStagesWrapper .description {
+  font-size: 0.9rem;
+  color: #000;
+}
+
+/* Mobile responsiveness */
+// @media (max-width: 600px) {
+//   .competitionStagesWrapper {
+//     padding: 0.5rem;
+//     width: 90%;
+//     height: 400px;
+//     margin-left: 5%;
+//   }
+
+//   .competitionStagesWrapper .stageContainer {
+//     min-width: 200px;
+//   }
+
+//   .competitionStagesWrapper .heading {
+//     font-size: 1rem;
+//   }
+
+//   .competitionStagesWrapper .description {
+//     font-size: 0.85rem;
+//   }
 // }
 
 // ART CATEGORY SECTION
@@ -10782,21 +10831,6 @@ body .btn-twentySix:hover:after {
   }
 }
 
-@media (max-width: 480px) {
-  .carouselContainer {
-    width: 100% !important;
-    margin: auto;
-  }
-  .card {
-    width: 200px;
-    min-width: 200px;
-  }
-
-  .cardImage {
-    height: 150px;
-  }
-}
-
 .elements {
   position: absolute;
 }
@@ -10869,16 +10903,18 @@ body .btn-twentySix:hover:after {
 
 .promoSection-wrapper {
   // background-image: url(../images/gallery/bg-images/whiteArt1.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  // background-color: #fbf9d2;
+  // background-size: cover;
+  // background-position: center;
+  // background-repeat: no-repeat;
   margin-bottom: 4rem;
 }
 
 .promoSection {
   background-color: #000;
   // background-image: url(../images/gallery/bg-images/whiteArt1.jpg);
-  padding: 20px;
+  padding-inline: 20px;
+  padding-block: 3rem;
   color: #fff;
   text-align: center;
 }
@@ -10907,10 +10943,10 @@ body .btn-twentySix:hover:after {
   transition: transform 0.3s ease;
 }
 
-.promoSection .card:hover,
-.promoSection .card:focus {
-  transform: rotateY(180deg);
-}
+// .promoSection .card:hover,
+// .promoSection .card:focus {
+//   transform: rotateY(180deg);
+// }
 
 .promoSection .cardYellow {
   background-color: #ff0;
@@ -10942,7 +10978,9 @@ body .btn-twentySix:hover:after {
 }
 
 .promoSection .registerLink {
-  color: #ff0;
+  // color: #ff0;
+  // color: #54bfa5;
+  color: #fff;
   font-size: 1.2rem;
   text-decoration: underline;
   font-weight: bold;
@@ -10963,7 +11001,8 @@ body .btn-twentySix:hover:after {
 
 .reg-form-section {
   // background-image: url(../images/gallery/bg-images/ynb2.jpg);
-  background-image: url(../images/gallery/bg-images/check-bg1.jpg);
+  // background-image: url(../images/gallery/bg-images/check-bg1.jpg);
+  background-color: #ffc;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -11070,6 +11109,8 @@ body .btn-twentySix:hover:after {
     width: 95%;
     flex-wrap: wrap;
   }
+
+  
 }
 
 @media (max-width: 1500px) {
@@ -11077,6 +11118,14 @@ body .btn-twentySix:hover:after {
   // .form-container select {
   //   padding: 0.5rem 0.3rem;
   // }
+
+  .competitionStagesWrapper  {
+    width: 90%;
+  }
+  .competitionStagesWrapper .card {
+    width: 200px;
+    min-width: 250px;
+  }
 
   .reg-form-wrapper {
     width: 60%;
@@ -11114,6 +11163,14 @@ body .btn-twentySix:hover:after {
 
   .stage-container {
     flex-basis: 100%;
+  }
+
+  .competitionStagesWrapper  {
+    width: 90%;
+  }
+  .competitionStagesWrapper .card {
+    width: 200px;
+    min-width: 250px;
   }
 
   .reg-flex-container {
@@ -11196,6 +11253,11 @@ body .btn-twentySix:hover:after {
 
   .countdown .timeBlock .label {
     font-size: 0.8rem;
+  }
+
+  .competitionStagesWrapper .card {
+    width: 200px;
+    min-width: 250px;
   }
 
   .competitionGuidelines-container img {
@@ -11296,6 +11358,11 @@ body .btn-twentySix:hover:after {
     top: 2rem;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+
+  .competitionStagesWrapper .card {
+    width: 200px;
+    min-width: 200px;
   }
 
   .reg-flex-container {
@@ -11450,6 +11517,25 @@ body .btn-twentySix:hover:after {
 
   .maintenance-container p {
     font-size: 1.2rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .carouselContainer {
+    width: 100% !important;
+    margin: auto;
+  }
+  .card {
+    width: 200px;
+    min-width: 200px;
+  }
+  .competitionStagesWrapper .card {
+    width: 200px;
+    min-width: 200px;
+  }
+
+  .cardImage {
+    height: 150px;
   }
 }
 

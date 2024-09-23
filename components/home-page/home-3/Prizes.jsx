@@ -33,8 +33,8 @@ const PromoSection = () => {
         </div>
       </div>
       <div className="register">
-        <a href="#registration-form-ref" className="registerLink">
-          Enlist by August 20th, 2024 (Register Here)
+        <a href="#resgistration-form-ref" className="registerLink">
+          Enlist now
         </a>
       </div>
     </div>
