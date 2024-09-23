@@ -24,7 +24,7 @@ const categories = [
   {
     skill: "Gaming",
     examples:
-      "adventure, Combat, Multiplayer battle arena, Alternate reality, etc",
+      "adventure, Combat, Multiplayer battle arena, Alternate reality, etc",
     img: "/images/gallery/competitionsImages/gaming-img.jpg"
   },
   {
@@ -101,20 +101,20 @@ export default function CompetitionStages() {
   };
 
   const containerRef = useRef(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  // const [currentIndex, setCurrentIndex] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % categories.length);
-      const scrollAmount = containerRef.current.scrollWidth / categories.length;
-      containerRef.current.scrollTo({
-        left: currentIndex * scrollAmount,
-        behavior: "smooth"
-      });
-    }, 1000);
+  // useEffect(() => {
+  //   // const interval = setInterval(() => {
+  //   setCurrentIndex((prevIndex) => (prevIndex + 1) % categories.length);
+  //   const scrollAmount = containerRef.current.scrollWidth / categories.length;
+  //   // containerRef.current.scrollTo({
+  //   //   left: currentIndex * scrollAmount,
+  //   //   behavior: "smooth"
+  //   // });
+  //   // }, 1000);
 
-    return () => clearInterval(interval);
-  }, [currentIndex]);
+  //   // return () => clearInterval(interval);
+  // }, [currentIndex]);
 
   return (
     <div className="carouselContainer ">

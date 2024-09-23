@@ -127,7 +127,7 @@ const education = () => {
 
       <div
         // style={{ marginTop: "8rem" }}
-        className="promoSection-wrapper mt-100 position-relative zn2 pt-90 pb-50 lg-pt-50 lg-pb-10"
+        className="promoSection-wrapper mt-30 position-relative zn2 pt-90 pb-50 lg-pt-50 lg-pb-10"
       >
         <div className="container">
           <div className="row gx-xxl-5">

@@ -13,13 +13,13 @@ if (typeof window !== "undefined") {
 export default function RootLayout({ children }) {
   useEffect(() => {
     Aos.init({
-      duration: 1200,
+      duration: 1200
     });
   }, []);
   return (
     <html lang="en">
       <body>
-        <div className="main-page-wrapper">
+        <div className="main-page-wrapper" style={{ background: "#fffff3" }}>
           {children}
           <ScrollToTop />
         </div>

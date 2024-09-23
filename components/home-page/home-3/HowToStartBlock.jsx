@@ -17,7 +17,7 @@ const HowToStartBlock = () => {
             }}
           >
             <div>
-              <h5>Yourekaa Battle of the Arts.</h5>
+              <h5>Battle of the Arts.</h5>
               <p>Show the world what you can do!</p>
               <div className="reg-form-info-img">
                 <div
@@ -54,7 +54,7 @@ const HowToStartBlock = () => {
                 >
                   hello@yourekaa.com
                 </Link>
-                <div className="d-flex">
+                {/* <div className="d-flex">
                   <span>
                     {" "}
                     <Image
@@ -71,8 +71,23 @@ const HowToStartBlock = () => {
                     ></Image>
                   </span>
 
-                  <span></span>
-                </div>
+                  <span>
+                    {" "}
+                    <Image
+                      src="/images/icon/facebook-icon.jpg"
+                      width={40}
+                      height={30}
+                    ></Image>
+                  </span>
+                  <span>
+                    {" "}
+                    <Image
+                      src="/images/icon/linkedin-img.jpg"
+                      width={40}
+                      height={30}
+                    ></Image>
+                  </span>
+                </div> */}
               </div>
             </div>
           </div>

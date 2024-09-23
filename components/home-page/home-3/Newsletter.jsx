@@ -12,7 +12,7 @@ export default function Newsletter() {
   }, []);
 
   return (
-    <div className="newsletter-container">
+    <div className="newsletter-container mb-30">
       <div>
         <h4>Get all the updates about the competition.</h4>
         <p>Sign up for our newsletters.</p>
