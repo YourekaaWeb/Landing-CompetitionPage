@@ -7,8 +7,8 @@ const Hero = () => {
   return (
     <div className="hero-banner-twelve pt-225 pb-120 lg-pb-80 md-pt-200">
       <div className="container">
-        <div className="row align-items-center">
-          <div className="col-md-6">
+        <div className="row align-items-center  gap-10">
+          <div className="col-md-6 mr-5 mb-100">
             <div className="text-wrapper" data-aos="fade-right">
               {/* //fw-500 tx-dark */}
               <h1 className="hero-heading">Battle of the Arts.</h1>
@@ -16,11 +16,11 @@ const Hero = () => {
                 Show the world what you can do!
               </p> */}
               <p className="tx-dark mb-30 pt-35 lg-pt-20 lg-mb-20">
-                In a world where perfection is often prized, we're excited to
-                announce a creative competition that celebrates the beauty in
-                the broken, the imperfect, and the unconventional. We want you
-                to explore beauty in the fractured, the fragmented, and the
-                unconventional.
+                You fill up an empty canvas with wonders, the rainbow looks at
+                your painting in awe, the Statue of Liberty would be more
+                beautiful if you sculpted it, the birds envy your voice, your
+                pen does magnificent things when it kisses a note, you are
+                creatively excellent in whatever you do!
               </p>
               <div className="d-lg-flex align-items-center">
                 <div
@@ -44,47 +44,44 @@ const Hero = () => {
               </div>
             </div>
           </div>
+
+          <div className="col-md-6 h-50">
+            <div className="bg-black  h-50">
+              <h3 className="text-white text-start p-4 fw-300 fs-2 ">
+                Theme: <br /> Fractured Beauty
+              </h3>
+            </div>
+            <Image
+              width={490}
+              height={942}
+              layout="responsive"
+              // src="/images/gallery/competitionsImages/BOA1.gif"
+              src="/images/gallery/competitionsImages/yourekaaCraft.svg"
+              alt="img"
+              className="lazy-img w-100 h-50 position-relative"
+              unoptimized={true}
+              loading="eager"
+            />
+
+            <div className=" bg-black p-3 bottom-10 mt-[3rem] ">
+              {" "}
+              <Countdown targetDate="2024-11-31T00:00:00" />
+            </div>
+          </div>
           {/* End col-6 */}
 
-          <div
+          {/* <div
             className="col-xxl-6 col-xl-5 col-md-6 ms-auto text-end"
-            data-aos="fade-left"
-          >
-            <div className="image-holder zn2 d-inline-block position-relative sm-mt-60">
-              <img
+            // data-aos="fade-left"
+          > */}
+          {/* <div className="image-holder zn2 d-inline-block  sm-mt-60"> */}
+          {/* <img
                 src="/images/assets/bg-12.png"
                 alt="img"
                 className="lazy-img"
-              />
-              <div className="media-img ">
-                <div className="bg-black   h-50">
-                  <h3 className="text-white text-start p-4 fw-300 fs-2 ">
-                    Theme: <br /> Fractured Beauty
-                  </h3>
-                  {/* <h3 className="text-white text-middle fw-400 fs-1 p-3">
-                    {" "}
-                    Fractured Beauty
-                  </h3> */}
-                </div>
-                <Image
-                  width={490}
-                  height={942}
-                  layout="responsive"
-                  // src="/images/gallery/competitionsImages/BOA1.gif"
-                  src="/images/gallery/competitionsImages/yourekaaCraft.svg"
-                  alt="img"
-                  className="lazy-img w-100 h-50 position-relative"
-                  unoptimized={true}
-                  loading="eager"
-                />
+              /> */}
 
-                <div className="position-absolute bg-black p-3 bottom-10 mt-[3rem] start-50 translate-middle ">
-                  {" "}
-                  <Countdown targetDate="2024-11-31T00:00:00" />
-                </div>
-              </div>
-
-              {/* <div
+          {/* <div
                 className="card-style card-one d-flex flex-column justify-content-center align-items-center"
                 data-aos="fade-right"
                 data-aos-delay="100"
@@ -92,7 +89,7 @@ const Hero = () => {
                 <h4>120k+</h4>
                 <p>Online Videos</p>
               </div> */}
-              {/* <div
+          {/* <div
                 className="card-style card-two d-flex flex-column justify-content-center align-items-center"
                 data-aos="fade-left"
                 data-aos-delay="100"
@@ -101,7 +98,7 @@ const Hero = () => {
                 <p>Categories</p>
               </div> */}
 
-              {/* <div
+          {/* <div
                 className="card-style card-three d-flex flex-column justify-content-center align-items-center"
                 data-aos="fade-left"
                 data-aos-delay="300"
@@ -117,7 +114,7 @@ const Hero = () => {
                   </span>
                 </div>
               </div> */}
-              {/* 
+          {/* 
               <img
                 // src="/images/shape/shape_146.svg"
                 src="/images/gallery/competitionsImages/monsterIcon.png"
@@ -130,7 +127,7 @@ const Hero = () => {
                   right: -220
                 }}
               /> */}
-              {/* <img
+          {/* <img
                 // src="/images/shape/shape_146.svg"
                 src="/images/gallery/competitionsImages/monsterIcon.png"
                 alt="shape"
@@ -142,21 +139,21 @@ const Hero = () => {
                   right: -10
                 }}
               /> */}
-              <img
+          {/* <img
                 src="/images/shape/shape_147.svg"
                 alt="shape"
                 className="shapes shape-two lazy-img"
-              />
-              {/* </div> */}
-              <img
+              /> */}
+          {/* </div> */}
+          {/* <img
                 src="/images/shape/shape_147.svg"
                 alt="shape"
                 className="shapes shape-two lazy-img"
-              />
-            </div>
-          </div>
-          {/* End col-6 */}
+              /> */}
+          {/* </div> */}
         </div>
+        {/* End col-6 */}
+        {/* </div> */}
         {/* /.row */}
       </div>
       {/* /.container */}

@@ -72,17 +72,20 @@ const RegistrationForm = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/competition/submit-entry`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formValues),
-      })
-      .then((response) => response.json())
-      .then((data) => console.log(data))
-      .catch((error) => console.error('Error:', error));
-      console.log(formValues)
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/competition/submit-entry`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(formValues)
+        }
+      )
+        .then((response) => response.json())
+        .then((data) => console.log(data))
+        .catch((error) => console.error("Error:", error));
+      console.log(formValues);
 
       const data = await res.json();
       setLoading(false);
@@ -96,33 +99,35 @@ const RegistrationForm = () => {
         setMessage(data.message);
 
         setFormData({
-          firstName: '',
-          lastName: '',
-          email: '',
-          gender: '',
-          age: '',
-          location: '',
-          participantType: '',
-          category: ''
+          firstName: "",
+          lastName: "",
+          email: "",
+          gender: "",
+          age: "",
+          location: "",
+          participantType: "",
+          category: ""
         });
 
         // alert("Form submitted successfully!");
       } else {
-        setMessage(data.message || 'Something went wrong!');
+        setMessage(data.message || "Something went wrong!");
       }
-      
     } catch (error) {
       // setLoading(false);
       // setMessage('Internal server error');
       setErrors(error);
     }
-    
   };
 
   return (
     <>
       {" "}
-      <form action="#" className="registration-form  text-black " onSubmit={handleSubmit}>
+      <form
+        action="#"
+        className="registration-form text-black"
+        onSubmit={handleSubmit}
+      >
         <h3 className="text-black mb-4">Enlist here</h3>
         <div className="messages" />
         <div className="row ">
@@ -130,7 +135,9 @@ const RegistrationForm = () => {
             <div className="row controls splitted-form">
               <div className="col-12">
                 <div className="input-group-meta form-group mb-20">
-                  <label className="d-block" htmlFor="firstName">First name*</label>
+                  <label className="d-block" htmlFor="firstName">
+                    First name*
+                  </label>
                   <input
                     type="text"
                     placeholder=""
@@ -146,7 +153,9 @@ const RegistrationForm = () => {
               </div>
               <div className="col-12">
                 <div className="input-group-meta form-group mb-20">
-                  <label className="d-block" htmlFor="lastName">Last name*</label>
+                  <label className="d-block" htmlFor="lastName">
+                    Last name*
+                  </label>
                   <input
                     type="text"
                     placeholder=""
@@ -164,7 +173,9 @@ const RegistrationForm = () => {
               </div>
               <div className="col-12">
                 <div className="input-group-meta form-group mb-20">
-                  <label className="d-block" htmlFor="email">Email*</label>
+                  <label className="d-block" htmlFor="email">
+                    Email*
+                  </label>
                   <input
                     type="email"
                     placeholder="audacious@yourekaa.com"
@@ -180,7 +191,9 @@ const RegistrationForm = () => {
               </div>
               <div className="col-12">
                 <div className="input-group-meta form-group mb-20">
-                  <label className="d-block" htmlFor="location">Location (city)*</label>
+                  <label className="d-block" htmlFor="location">
+                    Location (city)*
+                  </label>
                   <input
                     type="text"
                     placeholder=""

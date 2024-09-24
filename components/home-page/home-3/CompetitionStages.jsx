@@ -25,8 +25,9 @@ const CompetitionStages = () => {
           <small className="phase ">Phase 2</small>
           <h6 className="heading text-white">Review of submissions</h6>
           <p className="description text-white">
-            Submitted entries will be reviewed, and successful participants will
-            move to the next stage of public voting.
+            Submitted entries will be reviewed and successful warriors will make
+            it to the public voting stage. (The general public will vote and
+            decide who makes it to the final stage).
           </p>
         </div>
       </div>
@@ -37,8 +38,9 @@ const CompetitionStages = () => {
           <small className="phase ">Phase 3</small>
           <h6 className="heading text-white">Judging of submissions</h6>
           <p className="description text-white">
-            Finalists will have their works judged by a panel of experienced
-            creatives. Submissions will be evaluated thoroughly.
+            The finalists who made it through public voting will have their
+            works judged by the battle masters, comprising experienced
+            creatives.
           </p>
         </div>
       </div>

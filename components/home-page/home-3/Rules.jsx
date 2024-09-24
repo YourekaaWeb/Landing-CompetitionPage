@@ -3,45 +3,45 @@ import Image from "next/image";
 
 const submissionGuidelines = [
   "You must be following all Yourekaa social media accounts",
-  "Participants must be part of the community",
-  "Entries must be original work created by the participant with or without collaboration",
-  "Entries must interpret the theme 'Fractured Beauty' in a way that is respectful and appropriate",
-  "A team shouldn't exceed three members",
-  "Submissions must be in visual creative formats. I.e. Images and videos",
-  "Participants must make a video to pitch their submission, to explain their work",
-  "Entries must be submitted through the designated platform",
-  "Participants can submit only one entry",
-  "Any entries after the submission deadline has passed are not valid"
+  "Warriors must be part of the community.",
+  "Entries must be original work created by the participant with or without collaboration.",
+  "Entries must interpret the theme 'Fractured Beauty' respectfully and appropriately.",
+  "A team should not exceed three members.",
+  "Submissions must be in visual creative formats, i.e. images and videos.",
+  "Warriors must make a video to pitch their submission and explain their work.",
+  "Entries must be submitted through the designated platform.",
+  "Warriors can submit only one entry.",
+  "Any entries after the submission deadline has passed are not valid."
 ];
 
 const judgingCriteria = [
   {
     icon: "🎨",
-    text: "Artistic Merit: Strength of overall artistic expression"
+    text: "Artistic Merit: The strength of your submission regarding overall artistic expression."
   },
   {
     icon: "💡",
-    text: 'Thematic Depth: Thoughtful exploration of the theme "Fractured Beauty"'
+    text: "Thematic Depth: How well your submission reflects 'Fractured Beauty.'"
   },
   {
     icon: "✍️",
-    text: "Craftsmanship: Exceptional skill, technique, and attention to detail"
+    text: "Craftsmanship: The skill, technique, and attention to detail that your work reflects."
   },
   {
     icon: "🌟",
-    text: "Originality: Innovation and distinctiveness in the submission"
+    text: "Originality: How innovative and distinctive is your submission compared to others?"
   },
   {
     icon: "💥",
-    text: "Overall Impression: Memorable and impactful, leaving a lasting impression"
+    text: "Overall Impression: The propensity of your submission to leave a lasting impression on the mind of the battle masters and everyone who sees it."
   },
   {
     icon: "📢",
-    text: "Presentation: Clarity, coherence, and visual appeal in communicating the vision"
+    text: "Presentation: The clarity, coherence, and visual appeal of your submission to communicate your idea in a simple yet distinct way."
   },
   {
     icon: "👍",
-    text: "Engagement: The number of likes and engagement your submissions garner"
+    text: "Engagement: The amount of likes and engagement your submissions garner."
   }
 ];
 

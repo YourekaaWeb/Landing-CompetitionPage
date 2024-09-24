@@ -8,22 +8,21 @@ const categories = [
   {
     skill: "Visual arts",
     examples: "digital, painting, sculpture, photography, etc",
-    img: "/images/gallery/competitionsImages/visualArts2.png"
+    img: "/images/gallery/competitionsImages/artist2.jpg"
   },
   {
     skill: "Performing arts",
     examples: "music, dance, theater, spoken word, film etc",
-    img: "/images/gallery/competitionsImages/music2.png"
+    img: "/images/gallery/competitionsImages/performingArts2.jpeg"
   },
   {
     skill: "Literary arts",
     examples: "poetry, short stories, essays, etc",
-    img: "/images/gallery/competitionsImages/literaryArts2.png"
+    img: "/images/gallery/competitionsImages/bookArt1.jpeg"
   },
   {
     skill: "Gaming",
-    examples:
-      "adventure, Combat, Multiplayer battle arena, Alternate reality, etc",
+    examples: "adventure, combat,  battle arena, alternate reality, etc",
     img: "/images/gallery/competitionsImages/gaming-img.jpg"
   },
   {
@@ -33,13 +32,12 @@ const categories = [
   },
   {
     skill: "Fashion ",
-    examples:
-      "streetwear Designers, Accessory Designers, Textile Designers, etc",
+    examples: "clothing, accessories, beauty, textiles, etc.",
     img: "/images/gallery/competitionsImages/fashion-img.jpg"
   },
   {
     skill: "Digital media",
-    examples: "video, animation, graphic design, etc.",
+    examples: "motion design, animation, graphic design, etc",
     img: "/images/gallery/competitionsImages/digital2.png"
   },
   {

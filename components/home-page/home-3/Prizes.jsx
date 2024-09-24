@@ -7,27 +7,30 @@ const PromoSection = () => {
       <div className="cardContainer">
         <div className="card cardYellow">
           <div className="cardContent">
-            <p className="cardText text-black">400k Cash Prizes to be Won!</p>
+            <p className="cardText text-black">
+              Over 400k bounty up for grabs!
+            </p>
           </div>
         </div>
         <div className="card cardBlack">
           <div className="cardContent">
             <p className="cardText">
-              Top 10 Submissions on Yourekaa Explore Page!
+              The top 6 warriors get featured on our socials.
             </p>
           </div>
         </div>
         <div className="card cardYellow">
           <div className="cardContent">
             <p className="cardText text-black">
-              Be a Part of Our Creative Community & Collaborate!
+              The top 3 warriors will be featured in Yourekaa HIGH series.
             </p>
           </div>
         </div>
         <div className="card cardBlack">
           <div className="cardContent">
             <p className="cardText">
-              Work with Inventors and Builders on Exciting Projects!
+              Enlisted warriors can join other contests and experiments in the
+              community.
             </p>
           </div>
         </div>

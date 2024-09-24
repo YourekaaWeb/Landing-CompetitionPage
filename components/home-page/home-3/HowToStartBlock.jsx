@@ -1,17 +1,38 @@
+"use client";
+
 import Link from "next/link";
-import React from "react";
+import { React, useState, useEffect } from "react";
 import RegistrationForm from "./RegistrationForm";
 import Image from "next/image";
 
 const HowToStartBlock = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     // <div className="fancy-feature-fortyThree position-relative pt-130 pb-65 lg-pt-80 reg-form-section">
-    <div className="reg-form-section px-10" id="resgistration-form-ref">
+    <div
+      className="reg-form-section px-10"
+      id={`${!isMobile && "resgistration-form-ref"}`}
+    >
       <div className="d-flex justify-content-center">
         <div className="d-flex reg-flex-container">
           <div
             className="reg-form-info col-xl-6 col-md-6 ms-auto w-40 "
-            // data-aos="fade-right"
+            data-aos="fade-left"
             style={{
               backgroundColor: "#ff0"
             }}
@@ -28,7 +49,7 @@ const HowToStartBlock = () => {
                     boxShadow: " 0 4px 15px rgba(0, 0, 0, 0.25)"
                   }}
                 >
-                  <p>
+                  <p id={`${isMobile && "resgistration-form-ref"}`}>
                     You fill up an empty canvas with wonders, the rainbow looks
                     at your painting in awe, the Statue of liberty would be more
                     beautiful if you sculpted it, the birds envy your voice,
@@ -38,7 +59,7 @@ const HowToStartBlock = () => {
                 </div>
               </div>
 
-              <div
+              {/* <div
                 className="mt-10 "
                 style={{
                   paddingLeft: "1rem",
@@ -46,15 +67,15 @@ const HowToStartBlock = () => {
                   placeItems: "center",
                   justifyContent: "center"
                 }}
-              >
-                <Link
+              > */}
+              {/* <Link
                   href="mailto:hello@yourekaa.com"
                   style={{ textDecoration: "underline" }}
                   className="pb-1"
                 >
                   hello@yourekaa.com
-                </Link>
-                {/* <div className="d-flex">
+                </Link> */}
+              {/* <div className="d-flex">
                   <span>
                     {" "}
                     <Image
@@ -88,7 +109,7 @@ const HowToStartBlock = () => {
                     ></Image>
                   </span>
                 </div> */}
-              </div>
+              {/* </div> */}
             </div>
           </div>
           {/* End .col */}
@@ -96,8 +117,7 @@ const HowToStartBlock = () => {
           <div
             // className="w-50"
             className=" bg-white reg-form-outer-wt-wrapper"
-
-            // data-aos="fade-left"
+            data-aos="fade-left"
           >
             <RegistrationForm />
           </div>
