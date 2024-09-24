@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import TermsModal from "./TermsAndConditionsModal";
 
 const RegistrationForm = () => {
   const [selectedOption, setSelectedOption] = useState("");
@@ -11,7 +12,7 @@ const RegistrationForm = () => {
     email: "",
     location: "",
     gender: "",
-    soloOrTeam: "",
+    participantType: "",
     age: "",
     category: ""
   });
@@ -54,7 +55,7 @@ const RegistrationForm = () => {
       newErrors.location = "Location must be at least 2 characters.";
     }
 
-    if (isNaN(formValues.age) || formValues.age < 1 || formValues.age > 150) {
+    if (isNaN(formValues.age) || formValues.age < 18 || formValues.age > 150) {
       newErrors.age = "Age must be a number between 1 and 150.";
     }
 
@@ -67,22 +68,61 @@ const RegistrationForm = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (validate()) {
-      alert("Form submitted successfully!");
-    } else {
-      alert("Please fill the form appropriately before submitting");
+
+    try {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/competition/submit-entry`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formValues),
+      })
+      .then((response) => response.json())
+      .then((data) => console.log(data))
+      .catch((error) => console.error('Error:', error));
+      console.log(formValues)
+
+      const data = await res.json();
+      setLoading(false);
+
+      if (validate()) {
+        alert("Form submitted successfully!");
+      } else {
+        alert("Please fill the form appropriately before submitting");
+      }
+      if (res.status === 201) {
+        setMessage(data.message);
+
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          gender: '',
+          age: '',
+          location: '',
+          participantType: '',
+          category: ''
+        });
+
+        // alert("Form submitted successfully!");
+      } else {
+        setMessage(data.message || 'Something went wrong!');
+      }
+      
+    } catch (error) {
+      // setLoading(false);
+      // setMessage('Internal server error');
+      setErrors(error);
     }
+    
   };
 
   return (
     <>
-      <form
-        action="#"
-        className="registration-form  text-black "
-        onSubmit={handleSubmit}
-      >
+      {" "}
+      <form action="#" className="registration-form  text-black " onSubmit={handleSubmit}>
         <h3 className="text-black mb-4">Enlist here</h3>
         <div className="messages" />
         <div className="row ">
@@ -90,7 +130,7 @@ const RegistrationForm = () => {
             <div className="row controls splitted-form">
               <div className="col-12">
                 <div className="input-group-meta form-group mb-20">
-                  <label className="d-block">First name*</label>
+                  <label className="d-block" htmlFor="firstName">First name*</label>
                   <input
                     type="text"
                     placeholder=""
@@ -106,7 +146,7 @@ const RegistrationForm = () => {
               </div>
               <div className="col-12">
                 <div className="input-group-meta form-group mb-20">
-                  <label className="d-block">Last name*</label>
+                  <label className="d-block" htmlFor="lastName">Last name*</label>
                   <input
                     type="text"
                     placeholder=""
@@ -124,7 +164,7 @@ const RegistrationForm = () => {
               </div>
               <div className="col-12">
                 <div className="input-group-meta form-group mb-20">
-                  <label className="d-block">Email*</label>
+                  <label className="d-block" htmlFor="email">Email*</label>
                   <input
                     type="email"
                     placeholder="audacious@yourekaa.com"
@@ -140,7 +180,7 @@ const RegistrationForm = () => {
               </div>
               <div className="col-12">
                 <div className="input-group-meta form-group mb-20">
-                  <label className="d-block">Location (city)*</label>
+                  <label className="d-block" htmlFor="location">Location (city)*</label>
                   <input
                     type="text"
                     placeholder=""
@@ -170,8 +210,9 @@ const RegistrationForm = () => {
                     <option value="" disabled selected>
                       Select a gender
                     </option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    {/* <option value="">Rather not say</option> */}
                   </select>
                   {errors.gender && (
                     <small className="error-message">{errors.gender}</small>
@@ -182,16 +223,16 @@ const RegistrationForm = () => {
                 <div className="input-group-meta form-group mb-20">
                   <label className="d-block">Solo or team*</label>
                   <select
-                    name="soloOrTeam"
-                    value={formValues.soloOrTeam}
+                    name="participantType"
+                    value={formValues.participantType}
                     onChange={handleInputChange}
                     className="w-100"
                   >
                     <option value="" disabled selected>
                       Select an option
                     </option>
-                    <option value="solo">Solo</option>
-                    <option value="team">Team</option>
+                    <option value="Solo">Solo</option>
+                    <option value="Team">Team</option>
                   </select>
                 </div>
               </div>
