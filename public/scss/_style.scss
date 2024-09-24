@@ -348,11 +348,12 @@ p {
   right: 5px;
   z-index: 99;
   text-align: center;
-  color: #fff;
+  color: #333;
   font-size: 25px;
   cursor: pointer;
   border-radius: 50%;
-  background: var(--prime-ten);
+  // background: var(--prime-ten);
+  background-color: #fffff3;
   transition: all 0.3s ease-in-out;
 }
 .scroll-top:after {
@@ -1661,7 +1662,8 @@ body .btn-twentySix:hover:after {
   transition: all 0.3s ease-in-out;
 }
 .sidebar-nav .social-icon a:hover {
-  color: var(--prime-ten);
+  // color: var(--prime-ten);
+  color: #ff0;
 }
 /*^^^^^^^^^^^^^^^^^^^^^ Theme Hero Banner One ^^^^^^^^^^^^^^^^^^^^^^^^*/
 .hero-banner-one {
@@ -8180,7 +8182,7 @@ body .btn-twentySix:hover:after {
 }
 /*^^^^^^^^^^^^^^^^^^^^^ Footer Eleven ^^^^^^^^^^^^^^^^^^^^^^^^*/
 .footer-style-eleven {
-  padding: 150px 0 0;
+  padding: 50px 0 0;
 }
 .theme-basic-footer.footer-style-eleven .footer-title {
   color: rgba(11, 11, 11, 0.35);
@@ -8200,8 +8202,8 @@ body .btn-twentySix:hover:after {
 }
 .footer-style-eleven .bottom-footer {
   border-top: 1px solid rgba(0, 0, 0, 0.08);
-  padding: 20px 0 35px;
-  margin-top: 60px;
+  padding: 5px 0 35px;
+  margin-top: 10px;
 }
 .footer-style-eleven .bottom-footer .footer-nav a {
   font-size: 15px;
@@ -8222,7 +8224,8 @@ body .btn-twentySix:hover:after {
   transition: all 0.3s ease-in-out;
 }
 .footer-style-eleven .bottom-footer .social-icon a:hover {
-  color: var(--prime-two);
+  // color: var(--prime-two);
+  color: #ff0;
 }
 .footer-style-eleven .shape-one {
   left: 0;
@@ -10677,12 +10680,17 @@ body .btn-twentySix:hover:after {
   // width: 30%;
   height: 350px;
   margin: auto;
-  background-color: #ff0;
+  // background-color: #ff0;
+  // background-color: #fffff3;
   border-radius: 10px;
   padding: 1rem;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  background-image: url(../images/gallery/bg-images/yellowGif2.gif);
+  // background-size: cover;
+  // background-position: center;
+  // background-repeat: no-repeat;
 }
 
 .competitionStagesWrapper .stageContainer:hover {
@@ -10693,6 +10701,7 @@ body .btn-twentySix:hover:after {
   padding: 1rem;
   max-width: 90%;
   height: 100%;
+  border: 1px solid white;
 }
 
 .competitionStagesWrapper .phase {
@@ -11109,8 +11118,6 @@ body .btn-twentySix:hover:after {
     width: 95%;
     flex-wrap: wrap;
   }
-
-  
 }
 
 @media (max-width: 1500px) {
@@ -11119,7 +11126,7 @@ body .btn-twentySix:hover:after {
   //   padding: 0.5rem 0.3rem;
   // }
 
-  .competitionStagesWrapper  {
+  .competitionStagesWrapper {
     width: 90%;
   }
   .competitionStagesWrapper .card {
@@ -11165,7 +11172,7 @@ body .btn-twentySix:hover:after {
     flex-basis: 100%;
   }
 
-  .competitionStagesWrapper  {
+  .competitionStagesWrapper {
     width: 90%;
   }
   .competitionStagesWrapper .card {

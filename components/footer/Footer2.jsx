@@ -1,31 +1,37 @@
 const columns = [
   {
-    title: "Links",
+    title: "Contact",
     links: [
-      { label: "Home", url: "/" },
-      { label: "Pricing", url: "/" },
-      { label: "About us", url: "/" },
-      { label: "Service", url: "/" },
-      { label: "Blog", url: "/" }
+      { label: "hello@yourekaa.com", url: "mailto:hello@yourekaa.com" },
+      { label: "Tel: 09045130086", url: "tel:09045130086" }
+      // { label: "About us", url: "/" },
+      // { label: "Service", url: "/" },
+      // { label: "Blog", url: "/" }
     ]
   },
   {
-    title: "Support",
+    title: "Menu",
     links: [
-      { label: "Item Support", url: "/" },
-      { label: "Forum", url: "/" },
-      { label: "Report Abuse", url: "/" },
-      { label: "Live", url: "/" }
+      {
+        label: "Join our community",
+        url: "/https://chat.whatsapp.com/LS9Pekca5gr1VTeOe44n8l"
+      },
+      { label: "Share your story", url: "ailto:hello@yourekaa.com" }
+      // { label: "Report Abuse", url: "/" },
+      // { label: "Live", url: "/" }
     ]
   },
   {
-    title: "Products",
+    title: "Social",
     links: [
-      { label: "Web hosting", url: "/" },
-      { label: "Cloud hosting", url: "/" },
-      { label: "WordPress hosting", url: "/" },
-      { label: "VPS hosting", url: "/" },
-      { label: "Dedicated hosting", url: "/" }
+      { label: "Twitter", url: "/https://x.com/yourekaa_" },
+      {
+        label: "Instagram",
+        url: "/https://www.instagram.com/yourekaa.discover/"
+      },
+      { label: "Facebook", url: "/" },
+      { label: "Linkedin", url: "/" }
+      // { label: "Dedicated hosting", url: "/" }
     ]
   }
 ];

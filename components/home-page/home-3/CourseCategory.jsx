@@ -4,7 +4,6 @@ import Image from "next/image";
 import Slider from "react-slick";
 import { useEffect, useRef, useState } from "react";
 
-// const CourseCategory = () => {
 const categories = [
   {
     skill: "Visual arts",
@@ -14,12 +13,12 @@ const categories = [
   {
     skill: "Performing arts",
     examples: "music, dance, theater, spoken word, film etc",
-    img: "/images/gallery/competitionsImages/music1.png"
+    img: "/images/gallery/competitionsImages/music2.png"
   },
   {
     skill: "Literary arts",
     examples: "poetry, short stories, essays, etc",
-    img: "/images/gallery/competitionsImages/literaryArts1.jpg"
+    img: "/images/gallery/competitionsImages/literaryArts2.png"
   },
   {
     skill: "Gaming",
@@ -47,24 +46,6 @@ const categories = [
     skill: "Unconventional materials",
     examples: "recycled materials, natural elements, etc",
     img: "/images/gallery/competitionsImages/unconventionArt-img.jpg"
-  }
-];
-
-const testimonial = [
-  {
-    phase: "Phase 1",
-    title: "Submission & Social Sharing",
-    text: "Submit your entry on Instagram and Facebook using the #DiscoverwithYourekaa hashtag Encourage likes, comments, and shares to support their entry."
-  },
-  {
-    phase: "Phase 2",
-    title: "Review of submissions",
-    text: "Submitted entries will be reviewed and successful participants will make it to the next stage of public voting. (The general public will vote and decide who makes it to the final stage)."
-  },
-  {
-    phase: "Phase 3",
-    title: "Judging of submissions",
-    text: "  The finalists who made it through public voting will have their works judged by a panel of judges comprising experienced creatives. Submissions will be judged"
   }
 ];
 
@@ -137,121 +118,4 @@ export default function CompetitionStages() {
       </div>
     </div>
   );
-
-  {
-    /* Second Div */
-  }
-  {
-    /* <div className="stage-container">
-                      <div className="card">
-                        <small className="pb-3">Phase 2</small>
-                        <h6>Review of submissions</h6>
-                        <p>
-                          Submitted entries will be reviewed and successful participants will
-                          make it to the next stage of public voting. (The general public will
-                          vote and decide who makes it to the final stage).
-                        </p>
-                      </div>
-                    </div> */
-  }
-
-  {
-    /* Third Div */
-  }
-  {
-    /* <div className="stage-container">
-                      <div className="card">
-                        <small className="pb-3">Phase 3</small>
-                        <h6>Judging of submissions</h6>
-                        <p>
-                          The finalists who made it through public voting will have their
-                          works judged by a panel of judges comprising experienced creatives.
-                          Submissions will be judged
-                        </p>
-                      </div>
-                    </div> */
-  }
-
-  // </section>
 }
-
-//   return (
-//     <>
-
-//       {categories.map((category, index) => (
-//         <div
-//           key={index}
-//           style={{ borderRadius: "100%" }}
-//           className="col-lg-3 col-md-4 col-sm-6 d-flex custom-div"
-//         >
-//           <a
-//             href="#"
-//             className="card-style-eighteen text-center tran3s mb-40 xs-mb-20"
-//           >
-//             <div className="icon d-flex align-items-end justify-content-center">
-//               <Image
-//                 width={42}
-//                 height={42}
-//                 src={category.img}
-//                 alt={`${category.skill} image`}
-//                 className="lazy-img"
-//               />
-//             </div>
-
-//             <h4 className="tx-dark mt-45 lg-mt-30">{category.skill}</h4>
-//             <p style={{ fontSize: "15px" }}>{category.examples}</p>
-//           </a>
-//           {/* <Image
-//             width={100}
-//             height={200}
-//             src={category.img}
-//             alt=""
-//             style={{ width: "90%", height: "80%" }}
-//             className="lazy-img overlay-img"
-//           /> */}
-//           {/* /.card-style-eighteen */}
-//         </div>
-//       ))}
-
-//       {/* {categories.map((item, index) => (
-//         <div
-//           key={index}
-//           class="custom-div col-lg-3 col-md-4 col-sm-6 d-flex row align-items-end justify-content-center tran3s mb-40 xs-mb-20 mr-2"
-//         >
-//           <div className="icon d-flex align-items-end justify-content-center">
-//             <Image
-//               width={42}
-//               height={42}
-//               src={item.img}
-//               alt=""
-//               className="lazy-img"
-//             />
-//           </div>
-//           <h3 class="text-center tx-dark mt-45 lg-mt-20">{item.skill}</h3>
-//           <p class="text-center">{item.examples}</p>
-//           <Image
-//             width={300}
-//             height={150}
-//             src={item.img}
-//             alt=""
-//             className="lazy-img "
-//           />
-//         </div>
-//       ))} */}
-
-//       {/* <div className="col-lg-3 col-md-4 col-sm-6 d-flex">
-//         <a
-//           href="#"
-//           className="card-style-eighteen more-item position-relative text-center tran3s mb-40"
-//         >
-//           <h3>20</h3>
-//           <p className="pb-20">More Category</p>
-//           <img src="/images/icon/icon_134.svg" alt="" className="m-auto" />
-//         </a>
-//         /.card-style-eighteen
-//       </div> */}
-//     </>
-//   );
-// };
-
-// export default CourseCategory;
