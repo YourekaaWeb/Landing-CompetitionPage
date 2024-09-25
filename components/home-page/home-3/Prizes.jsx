@@ -15,22 +15,21 @@ const PromoSection = () => {
         <div className="card cardBlack">
           <div className="cardContent">
             <p className="cardText">
-              The top 6 warriors get featured on our socials.
+              The top 6 warriors get featured on our socials
             </p>
           </div>
         </div>
         <div className="card cardYellow">
           <div className="cardContent">
             <p className="cardText text-black">
-              The top 3 warriors will be featured in Yourekaa HIGH series.
+              Top 3 warriors get featured in Yourekaa HIGH series
             </p>
           </div>
         </div>
         <div className="card cardBlack">
           <div className="cardContent">
             <p className="cardText">
-              Enlisted warriors can join other contests and experiments in the
-              community.
+              Join other contests & experiments in the community
             </p>
           </div>
         </div>

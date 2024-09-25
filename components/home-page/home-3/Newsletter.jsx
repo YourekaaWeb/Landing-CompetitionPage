@@ -14,8 +14,11 @@ export default function Newsletter() {
   return (
     <div className="newsletter-container mb-50">
       <div>
-        <h4>Get all the updates about the competition.</h4>
-        <p>Sign up for our newsletters.</p>
+        <h4>
+          Some people are half human half audacity. <br /> We find them & talk
+          about their crazy moves
+        </h4>
+        <p>It could be chaotic or emotional but always awesome!</p>
       </div>
       <div
         dangerouslySetInnerHTML={{

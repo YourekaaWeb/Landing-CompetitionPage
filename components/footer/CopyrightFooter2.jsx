@@ -14,11 +14,11 @@ const links = [
 const icons = [
   {
     icon: "fab fa-twitter",
-    href: "/https://x.com/yourekaa_"
+    href: "https://x.com/yourekaa_"
   },
   {
     icon: "fab fa-instagram",
-    href: "/https://www.instagram.com/yourekaa.discover/"
+    href: "https://www.instagram.com/yourekaa.discover/"
   },
   {
     icon: "fab fa-facebook-f",
@@ -69,7 +69,7 @@ const Footer = () => {
           </div>
           <div className="col-lg-4 order-lg-1 mt-15">
             <p className="copyright text-center m0">
-              {/* © Yourekaa {new Date().getFullYear()}{" "} */}
+              © Yourekaa {new Date().getFullYear()}{" "}
               {/* <a
                 style={{ color: "inherit" }}
                 href="https://themeforest.net/user/ib-themes"

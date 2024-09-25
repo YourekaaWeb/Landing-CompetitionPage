@@ -45,7 +45,20 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="col-md-6 h-50">
+          <div className="col-md-6 position-relative h-50">
+            {/* <div className="position-absolute w-100"> */}{" "}
+            {/* <img
+              src="/images/media/img_59.jpg"
+              alt=""
+              style={{ position: "absolute", top: -40, right: -15 }}
+            /> */}
+            {/* <img
+              src="/images/media/img_59.jpg"
+              alt=""
+              style={{ position: "absolute", bottom: 70, left: -100 }}
+            /> */}
+            {/* <img src="/images/media/img_59.jpg" alt="" /> */}
+            {/* </div> */}
             <div className="bg-black  h-50">
               <h3 className="text-white text-start p-4 fw-300 fs-2 ">
                 Theme: <br /> Fractured Beauty
@@ -62,12 +75,12 @@ const Hero = () => {
               unoptimized={true}
               loading="eager"
             />
-
             <div className=" bg-black p-3 bottom-10 mt-[3rem] ">
               {" "}
               <Countdown targetDate="2024-11-31T00:00:00" />
             </div>
           </div>
+
           {/* End col-6 */}
 
           {/* <div
@@ -90,13 +103,13 @@ const Hero = () => {
                 <p>Online Videos</p>
               </div> */}
           {/* <div
-                className="card-style card-two d-flex flex-column justify-content-center align-items-center"
-                data-aos="fade-left"
-                data-aos-delay="100"
-              >
-                <h4>200+</h4>
-                <p>Categories</p>
-              </div> */}
+            className="card-style card-two d-flex flex-column justify-content-center align-items-center"
+            data-aos="fade-left"
+            data-aos-delay="100"
+          >
+            <h4>200+</h4>
+            <p>Categories</p>
+          </div> */}
 
           {/* <div
                 className="card-style card-three d-flex flex-column justify-content-center align-items-center"

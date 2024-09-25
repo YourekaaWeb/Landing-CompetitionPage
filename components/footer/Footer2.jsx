@@ -14,7 +14,7 @@ const columns = [
     links: [
       {
         label: "Join our community",
-        url: "/https://chat.whatsapp.com/LS9Pekca5gr1VTeOe44n8l"
+        url: "https://chat.whatsapp.com/LS9Pekca5gr1VTeOe44n8l"
       },
       { label: "Share your story", url: "ailto:hello@yourekaa.com" }
       // { label: "Report Abuse", url: "/" },
@@ -24,10 +24,10 @@ const columns = [
   {
     title: "Social",
     links: [
-      { label: "Twitter", url: "/https://x.com/yourekaa_" },
+      { label: "Twitter", url: "https://x.com/yourekaa_" },
       {
         label: "Instagram",
-        url: "/https://www.instagram.com/yourekaa.discover/"
+        url: "https://www.instagram.com/yourekaa.discover/"
       },
       { label: "Facebook", url: "/" },
       { label: "Linkedin", url: "/" }

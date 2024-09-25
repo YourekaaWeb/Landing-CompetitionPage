@@ -1658,7 +1658,8 @@ body .btn-twentySix:hover:after {
 .sidebar-nav .social-icon a {
   font-size: 19px;
   margin-right: 22px;
-  color: rgba(0, 0, 0, 0.5);
+  // color: rgba(0, 0, 0, 0.5);
+  color: #ff0;
   transition: all 0.3s ease-in-out;
 }
 .sidebar-nav .social-icon a:hover {
@@ -8191,7 +8192,8 @@ body .btn-twentySix:hover:after {
   letter-spacing: 3px;
 }
 .footer-style-eleven .footer-nav-link a:hover {
-  color: var(--prime-two);
+  // color: var(--prime-two);
+  color: #ff0;
 }
 .footer-style-eleven .form-widget form input {
   border: 1px solid #000;
@@ -8220,7 +8222,7 @@ body .btn-twentySix:hover:after {
 .footer-style-eleven .bottom-footer .social-icon a {
   font-size: 19px;
   margin-left: 19px;
-  color: #333333;
+  color: #ff0;
   transition: all 0.3s ease-in-out;
 }
 .footer-style-eleven .bottom-footer .social-icon a:hover {

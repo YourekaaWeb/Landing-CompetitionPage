@@ -23,7 +23,7 @@ const CompetitionStages = () => {
       <div className="stageContainer">
         <div className="card ">
           <small className="phase ">Phase 2</small>
-          <h6 className="heading text-white">Review of submissions</h6>
+          <h6 className="heading text-white">Public Voting</h6>
           <p className="description text-white">
             Submitted entries will be reviewed and successful warriors will make
             it to the public voting stage. (The general public will vote and
@@ -36,7 +36,7 @@ const CompetitionStages = () => {
       <div className="stageContainer">
         <div className="card ">
           <small className="phase ">Phase 3</small>
-          <h6 className="heading text-white">Judging of submissions</h6>
+          <h6 className="heading text-white">Judging Of Submissions</h6>
           <p className="description text-white">
             The finalists who made it through public voting will have their
             works judged by the battle masters, comprising experienced
