@@ -129,7 +129,7 @@ const RegistrationForm = () => {
       {" "}
       <form action="#" className="registration-form  text-black " onSubmit={handleSubmit}>
         <h3 className="text-black mb-4">Enlist here</h3>
-        <div className="messages" />
+        <div className="messages">{message}</div>
         <div className="row ">
           <div className="  form-container">
             <div className="row controls splitted-form">
