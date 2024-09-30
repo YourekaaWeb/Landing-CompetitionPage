@@ -113,7 +113,7 @@ const RegistrationForm = () => {
           category: ""
         });
 
-        setSelectedOption(""); // Reset dropdown
+        setSelectedOption("");
         setOtherInput("");
       } else {
         setMessage(data.message || "Something went wrong!");

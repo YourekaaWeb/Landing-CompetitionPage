@@ -7,8 +7,8 @@ const Hero = () => {
   return (
     <div className="hero-banner-twelve pt-225 pb-120 lg-pb-80 md-pt-200">
       <div className="container">
-        <div className="row align-items-center  gap-10">
-          <div className="col-md-6 mr-5 mb-100">
+        <div className="row align-items-center">
+          <div className="col-md-6">
             <div className="text-wrapper" data-aos="fade-right">
               {/* //fw-500 tx-dark */}
               <h1 className="hero-heading">Battle of the Arts.</h1>
