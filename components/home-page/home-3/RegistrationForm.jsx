@@ -231,7 +231,6 @@ const RegistrationForm = () => {
                     </option>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
-                    {/* <option value="">Rather not say</option> */}
                   </select>
                   {errors.gender && (
                     <small className="error-message">{errors.gender}</small>
