@@ -17,6 +17,8 @@ const RegistrationForm = () => {
     category: ""
   });
   const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
 
   const handleDropdownChange = (e) => {
     setSelectedOption(e.target.value);
@@ -25,14 +27,16 @@ const RegistrationForm = () => {
 
   const handleOtherInputChange = (e) => {
     setOtherInput(e.target.value);
-    errors.category = "";
+    // errors.category = "";
     setFormValues({ ...formValues, category: e.target.value });
+    setErrors((prevErrors) => ({ ...prevErrors, category: "" }));
   };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    errors[name] = "";
+    // errors[name] = "";
     setFormValues({ ...formValues, [name]: value });
+    setErrors((prevErrors) => ({ ...prevErrors, [name]: "" }));
   };
 
   const validate = () => {
@@ -56,7 +60,7 @@ const RegistrationForm = () => {
     }
 
     if (isNaN(formValues.age) || formValues.age < 18 || formValues.age > 150) {
-      newErrors.age = "Age must be a number between 1 and 150.";
+      newErrors.age = "Age must be a number between 18 and above.";
     }
 
     if (!formValues.category) {
@@ -71,6 +75,14 @@ const RegistrationForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    if (!validate()) {
+      alert("Please fill the form appropriately before submitting");
+      return;
+    }
+
+    setLoading(true);
+    setMessage("");
+
     try {
       const res = await fetch(
         `${process.env.NEXT_PUBLIC_API_URL}/competition/submit-entry`,
@@ -81,22 +93,14 @@ const RegistrationForm = () => {
           },
           body: JSON.stringify(formValues)
         }
-      )
-        .then((response) => response.json())
-        .then((data) => console.log(data))
-        .catch((error) => console.error("Error:", error));
-      console.log(formValues);
+      );
 
       const data = await res.json();
       setLoading(false);
 
-      if (validate()) {
-        alert("Form submitted successfully!");
-      } else {
-        alert("Please fill the form appropriately before submitting");
-      }
       if (res.status === 201) {
-        setMessage(data.message);
+        setMessage(data.message || "Registration successful!");
+        alert("Form submitted successfully!");
 
         setFormData({
           firstName: "",
@@ -109,14 +113,16 @@ const RegistrationForm = () => {
           category: ""
         });
 
-        // alert("Form submitted successfully!");
+        setSelectedOption(""); // Reset dropdown
+        setOtherInput("");
       } else {
         setMessage(data.message || "Something went wrong!");
+        alert("Something went wrong, please try again.");
       }
     } catch (error) {
-      // setLoading(false);
-      // setMessage('Internal server error');
-      setErrors(error);
+      setLoading(false);
+      setErrors({ apiError: "Internal server error" });
+      alert("Internal server error, please try again later.");
     }
   };
 
@@ -129,7 +135,7 @@ const RegistrationForm = () => {
         onSubmit={handleSubmit}
       >
         <h3 className="text-black mb-4">Enlist here</h3>
-        <div className="messages" />
+        <div className="messages">{message}</div>
         <div className="row ">
           <div className="  form-container">
             <div className="row controls splitted-form">
