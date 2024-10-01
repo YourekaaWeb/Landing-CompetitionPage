@@ -5,6 +5,19 @@ import { React, useState, useEffect } from "react";
 import RegistrationForm from "./RegistrationForm";
 import Image from "next/image";
 
+
+export const MessagePopup = ({ message, onClose, isError }) => {
+  return (
+    <div className="popup-overlay">
+      <div className={`popup-content ${isError ? "error" : "success"}`}>
+        <h3>{isError ? "Error" : "Success"}</h3>
+        <p>{message}</p>
+        <button onClick={onClose}>Close</button>
+      </div>
+    </div>
+  );
+};
+
 const HowToStartBlock = () => {
   const [isMobile, setIsMobile] = useState(false);
 
@@ -22,12 +35,28 @@ const HowToStartBlock = () => {
     };
   }, []);
 
+  const [message, setMessage] = useState("");
+  const [showPopup, setShowPopup] = useState(false);
+  const [isError, setIsError] = useState(false);
+
+  const handleClosePopup = () => {
+    setShowPopup(false);
+  };
+
   return (
     // <div className="fancy-feature-fortyThree position-relative pt-130 pb-65 lg-pt-80 reg-form-section">
     <div
       className="reg-form-section px-10"
       id={`${!isMobile && "resgistration-form-ref"}`}
     >
+      {showPopup && (
+        <MessagePopup
+          message={message}
+          isError={isError}
+          onClose={handleClosePopup}
+        />
+      )}
+      
       <div className="d-flex justify-content-center">
         <div className="d-flex reg-flex-container">
           <div
@@ -119,7 +148,11 @@ const HowToStartBlock = () => {
             className=" bg-white reg-form-outer-wt-wrapper"
             data-aos="fade-left"
           >
-            <RegistrationForm />
+            <RegistrationForm 
+              setMessage={setMessage}
+              setShowPopup={setShowPopup}
+              setIsError={setIsError}
+            />
           </div>
           {/* End .col */}
         </div>

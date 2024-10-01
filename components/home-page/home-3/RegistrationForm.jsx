@@ -2,20 +2,21 @@
 
 import React, { useState } from "react";
 import TermsModal from "./TermsAndConditionsModal";
+import MessagePopup from "./HowToStartBlock";
 
-const MessagePopup = ({ message, onClose, isError }) => {
-  return (
-    <div className="popup-overlay">
-      <div className={`popup-content ${isError ? "error" : "success"}`}>
-        <h3>{isError ? "Error" : "Success"}</h3>
-        <p>{message}</p>
-        <button onClick={onClose}>Close</button>
-      </div>
-    </div>
-  );
-};
+// const MessagePopup = ({ message, onClose, isError }) => {
+//   return (
+//     <div className="popup-overlay">
+//       <div className={`popup-content ${isError ? "error" : "success"}`}>
+//         <h3>{isError ? "Error" : "Success"}</h3>
+//         <p>{message}</p>
+//         <button onClick={onClose}>Close</button>
+//       </div>
+//     </div>
+//   );
+// };
 
-const RegistrationForm = () => {
+const RegistrationForm = ({setMessage, setIsError, setShowPopup}) => {
   const [selectedOption, setSelectedOption] = useState("");
   const [otherInput, setOtherInput] = useState("");
   const [formValues, setFormValues] = useState({
@@ -30,9 +31,9 @@ const RegistrationForm = () => {
   });
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState("");
-  const [showPopup, setShowPopup] = useState(false);
-  const [isError, setIsError] = useState(false);
+  // const [message, setMessage] = useState("");
+  // const [showPopup, setShowPopup] = useState(false);
+  // const [isError, setIsError] = useState(false);
 
   const handleDropdownChange = (e) => {
     setSelectedOption(e.target.value);
@@ -144,9 +145,9 @@ const RegistrationForm = () => {
     }
   };
 
-  const handleClosePopup = () => {
-    setShowPopup(false);
-  };
+  // const handleClosePopup = () => {
+  //   setShowPopup(false);
+  // };
 
   return (
     <>
@@ -353,13 +354,13 @@ const RegistrationForm = () => {
         </div>
       </form>
 
-      {showPopup && (
+      {/* {showPopup && (
         <MessagePopup
           message={message}
           isError={isError}
           onClose={handleClosePopup}
         />
-      )}
+      )} */}
     </>
   );
 };
