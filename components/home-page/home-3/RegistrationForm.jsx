@@ -3,6 +3,18 @@
 import React, { useState } from "react";
 import TermsModal from "./TermsAndConditionsModal";
 
+const MessagePopup = ({ message, onClose, isError }) => {
+  return (
+    <div className="popup-overlay">
+      <div className={`popup-content ${isError ? "error" : "success"}`}>
+        <h3>{isError ? "Error" : "Success"}</h3>
+        <p>{message}</p>
+        <button onClick={onClose}>Close</button>
+      </div>
+    </div>
+  );
+};
+
 const RegistrationForm = () => {
   const [selectedOption, setSelectedOption] = useState("");
   const [otherInput, setOtherInput] = useState("");
@@ -19,6 +31,8 @@ const RegistrationForm = () => {
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
+  const [showPopup, setShowPopup] = useState(false);
+  const [isError, setIsError] = useState(false);
 
   const handleDropdownChange = (e) => {
     setSelectedOption(e.target.value);
@@ -76,12 +90,13 @@ const RegistrationForm = () => {
     e.preventDefault();
 
     if (!validate()) {
-      alert("Please fill the form appropriately before submitting");
+      setMessage("Please fill the form appropriately before submitting");
+      setIsError(true);
+      setShowPopup(true);
       return;
     }
 
     setLoading(true);
-    setMessage("");
 
     try {
       const res = await fetch(
@@ -100,9 +115,10 @@ const RegistrationForm = () => {
 
       if (res.status === 201) {
         setMessage(data.message || "Registration successful!");
-        alert("Form submitted successfully!");
+        setIsError(false);
+        setShowPopup(true);
 
-        setFormData({
+        setFormValues({
           firstName: "",
           lastName: "",
           email: "",
@@ -117,13 +133,19 @@ const RegistrationForm = () => {
         setOtherInput("");
       } else {
         setMessage(data.message || "Something went wrong!");
-        alert("Something went wrong, please try again.");
+        setIsError(true);
+        setShowPopup(true);
       }
     } catch (error) {
       setLoading(false);
-      setErrors({ apiError: "Internal server error" });
-      alert("Internal server error, please try again later.");
+      setMessage("Internal server error.");
+      setIsError(true);
+      setShowPopup(true);
     }
+  };
+
+  const handleClosePopup = () => {
+    setShowPopup(false);
   };
 
   return (
@@ -135,7 +157,8 @@ const RegistrationForm = () => {
         onSubmit={handleSubmit}
       >
         <h3 className="text-black mb-4">Enlist here</h3>
-        <div className="messages">{message}</div>
+        {/* <div className="messages">{message}</div> */}
+
         <div className="row ">
           <div className="  form-container">
             <div className="row controls splitted-form">
@@ -323,11 +346,20 @@ const RegistrationForm = () => {
               type="submit"
               className="reg-submit-btn btn-one fw-500 w-100 text-uppercase fs-14 d-block"
             >
-              Enlist
+              {/* Enlist */}
+              {loading ? "Submitting..." : "Enlist"}
             </button>
           </div>
         </div>
       </form>
+
+      {showPopup && (
+        <MessagePopup
+          message={message}
+          isError={isError}
+          onClose={handleClosePopup}
+        />
+      )}
     </>
   );
 };
